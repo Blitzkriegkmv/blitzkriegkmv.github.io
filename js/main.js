@@ -1,29 +1,40 @@
 $(document).ready(function() {
-    mouseFollow();
+    mouseMagic();
+    
 })
 
 //Mouse follow Animation
-function mouseFollow() {
+function mouseMagic() {
     var mouseX = 0, mouseY = 0;
     var xp = 0, yp = 0;
      
     $(document).mousemove(function(e){
-      mouseX = e.pageX - 12;
-      mouseY = e.pageY - 12; 
+      mouseX = e.pageX - 26;
+      mouseY = e.pageY - 26; 
     });
       
     setInterval(function(){
       xp += ((mouseX - xp)/6);
       yp += ((mouseY - yp)/6);
-      $("#cursor-follow").css({left: xp +'px', top: yp +'px'});
+      $("#custom-cursor").css({left: xp +'px', top: yp +'px'});
     }, 20);
+
+    //Handle click events
+    $("*:not(.clickable)").click(function() {
+      $("#custom-cursor").css("filter", "brightness(200%)");
+      $('#custom-cursor').css("transform", 'scale(2)');
+      setTimeout(function() {
+        $("#custom-cursor").css("filter", "brightness(100%)");
+        $('#custom-cursor').css("transform", 'scale(1)');
+      }, 100)
+    })
 
     //Handle cursor follower
     $('.clickable').mouseover(function() {
-        $('.circle-cursor').css("transform", 'scale(2)');
+      $('#custom-cursor').css("transform", 'scale(2)');
     })
     $('.clickable').mouseout(function() {
-        $('.circle-cursor').css("transform", 'scale(1)');
+        $('#custom-cursor').css("transform", 'scale(1)');
         
     })
 }

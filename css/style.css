@@ -1,0 +1,287 @@
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+
+@font-face {
+    font-family: "Goffik";
+    src: url("/fonts/Goffik-O.ttf");
+}
+
+/* HTML5 display-role reset for older browsers */
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+	display:block;
+}
+body {
+	line-height:1;
+}
+ol,ul {
+	list-style:none;
+}
+blockquote,q {
+	quotes:none;
+}
+blockquote:before,blockquote:after,q:before,q:after {
+	content:'';
+	content:none;
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0;
+}
+article,aside,figcaption,figure,footer,header,hgroup,main,nav,section {
+	display:block;
+}
+input,button,select,optgroup,textarea {
+	margin:0;
+	font-family:inherit;
+	font-size:inherit;
+	line-height:inherit;
+}
+/* Reset Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body {
+    width: 100vw;
+    height: 100vh;
+}
+html {
+    font-size: 24px;
+}
+body {
+    overflow: hidden;
+}
+/* --------------- */
+
+
+/* Custom Elements */
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+.fg-white {
+    color: #e0e0e0;
+}
+.fg-grad-primary {
+    background: rgb(222,132,255);
+    background: linear-gradient(245deg, rgba(222,132,255,1) 0%, rgba(145,145,255,1) 47%, rgba(185,255,253,1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Containers */
+.container {
+    max-width: 1660px;
+    padding: 15px;
+    display: -ms-flex;
+    display: flex;                                                                                                                           
+}
+.row,.row2 {
+	display:-ms-flexbox;
+	display:flex;
+	-ms-flex-wrap:wrap;
+	flex-wrap:wrap;
+	margin-right:-15px;
+	margin-left:-15px;
+}
+.row2 {
+	margin-right:-10px !important;
+	margin-left:-10px !important;
+}
+.row>* {
+	padding-left:15px;
+	padding-right:15px;
+}
+.row2>* {
+	padding-left:10px !important;
+	padding-right:10px !important;
+}
+.col-1,.col-2,.col-3,.col-4,.col-5,.col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12,.col {
+	position:relative;
+	width:100%;
+	padding-right:15px;
+	padding-left:15px;
+}
+.col-1 {
+	-ms-flex:0 0 8.333333%;
+	flex:0 0 8.333333%;
+	max-width:8.333333%;
+}
+.col-2 {
+	-ms-flex:0 0 16.666667%;
+	flex:0 0 16.666667%;
+	max-width:16.666667%;
+}
+.col-3 {
+	-ms-flex:0 0 25%;
+	flex:0 0 25%;
+	max-width:25%;
+}
+.col-4 {
+	-ms-flex:0 0 33.333333%;
+	flex:0 0 33.333333%;
+	max-width:33.333333%;
+}
+.col-5 {
+	-ms-flex:0 0 43.666667%;
+	flex:0 0 43.666667%;
+	max-width:43.666667%;
+}
+.col-6 {
+	-ms-flex:0 0 50%;
+	flex:0 0 50%;
+	max-width:50%;
+}
+.col-7 {
+	-ms-flex:0 0 56.333333%;
+	flex:0 0 56.333333%;
+	max-width:56.333333%;
+}
+.col-8 {
+	-ms-flex:0 0 66.666667%;
+	flex:0 0 66.666667%;
+	max-width:66.666667%;
+}
+.col-9 {
+	-ms-flex:0 0 75%;
+	flex:0 0 75%;
+	max-width:75%;
+}
+.col-10 {
+	-ms-flex:0 0 83.333333%;
+	flex:0 0 83.333333%;
+	max-width:83.333333%;
+}
+.col-11 {
+	-ms-flex:0 0 91.666667%;
+	flex:0 0 91.666667%;
+	max-width:91.666667%;
+}
+.col-12 {
+	-ms-flex:0 0 100%;
+	flex:0 0 100%;
+	max-width:100%;
+}
+.d-flex {
+	display:flex;
+}
+.v-flex {
+    display: flex;
+    flex-direction: column;
+}
+.gap-15 {
+    gap: 15px;
+}
+.gap-30 {
+    gap: 30px;
+}
+.gap-45 {
+    gap: 45px;
+}
+.wrap {
+	flex-wrap:wrap;
+}
+.align-center {
+	align-items:center;
+}
+.justify-between {
+	justify-content:space-between;
+}
+.justify-center {
+	justify-content:center;
+}
+.justify-end {
+	justify-content:flex-end;
+}
+.text-center {
+	text-align:center;
+}
+
+.root {
+    width: 100%;
+    height: 100%;
+    background-color: #0e0e0e;
+}
+/* --------------- */
+
+/* Custom Cursor Styles */
+#custom-cursor {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 1px solid black;
+    background: url('/media/ring-circle.gif') no-repeat center;
+    background-size: contain;
+    pointer-events: none;
+    transition: 100ms;
+}
+
+/* --------------- */
+
+/* Pre-loader Styles */
+#pre-loader {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 2;
+}
+.pre-loader-wrapper {
+    height: 100%;
+}
+.pre-loader-wrapper > .container {
+    height: 100%;
+    width: 100%;
+}
+#pre-loader .heading {
+    position: relative;
+    font-family: "Goffik";
+    font-size: 5rem;
+    cursor: pointer;
+    animation: fadeIn 1s ease-in;
+}
+#pre-loader .sub-heading {
+    animation: fadeInDelayed 2s ease-in;
+}
+#pre-loader .description {
+    animation: fadeInDelayed 4s ease;
+}
+
+@keyframes fadeIn {
+    0% {
+        bottom: -20px;
+        opacity: 0;
+    }
+    100% {
+        bottom: 0px;
+        opacity: 1;
+    }
+}
+@keyframes fadeInDelayed {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* --------------- */
+
+/* Responsive styles */
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 14px;
+    }
+    #custom-cursor {
+        display: none;
+    }
+    #pre-loader .heading {
+        font-size: 3.5rem;
+    }
+}
