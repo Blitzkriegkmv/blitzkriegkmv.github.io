@@ -7,7 +7,8 @@
     <meta name="author" content="consolenine">
     <meta name="description" content="Blitzkrieg is the annual tech fest of Keshav Mahavidyalaya, University of Delhi.">
     <meta name="keywords" content="university of delhi, fest, tech, computer, science, delhi, student" >
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/anim.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/pre-loader.css">
     <script src="https://kit.fontawesome.com/a977ec77c3.js" crossorigin="anonymous"></script>
@@ -71,7 +72,167 @@
 
     <!-- Main Body Wrapper -->
     <section class="root">
-        
+        <!-- Main Header -->
+        <div class="header-wrapper container-fluid">
+            <nav class="navbar navbar-expand-md container-lg justify-between">
+                <a class="navbar-brand" href="#"><span class="mona-sans fg-grad-primary clickable" style="font-weight: 900;">BLITZKRIEG</span></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav align-center mr-auto mona-sans fg-white txt-24">
+                      <li class="nav-item active">
+                        <a class="nav-link clickable" href="#">HOME</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link clickable" href="#">EVENTS</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link clickable" href="#">SPONSORS</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link clickable" href="#">OUR TEAM</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link clickable" href="#">HOW TO REACH</a>
+                      </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- Header End -->
+        <div class="v-flex socials-container gap-15 justify-center align-center">
+            <div class="insta-container">
+                <a href="http://instagram.com/blitzkmv/" target="_blank"><img class="clickable" src="/media/icon _instagram.png" alt=""></a>
+            </div>
+            <div class="linkedin-container"><a href="https://www.linkedin.com/company/the-computer-science-society-keshav-mahavidyalaya/" target="_blank"><img class="clickable" src="/media/icon _linkedIn.png" alt=""></a></div>
+            <div class="email-container"><a href="mailto:team.blitzkmv@gmail.com"><img class="clickable" src="/media/icon _email_.png" alt=""></a></div>
+        </div>
+        <!-- <section class="hero-wrapper">
+            <div class="hero-bg"></div>
+            <div class="hero container justify-center">
+                <div class="container col-9">
+                    <div class="col-12 container v-flex justify-center align-center hero-content-main gap-30">
+                        <div class="row mona-sans fg-white fw-900">
+                            <h1>BLITZKRIEG '23</h1>
+                        </div>
+                        <div class="row mona-sans fg-white fw-900"><p style="font-size: 2rem;">TECH.<span style="color: cyan;">FUN.</span>FEST.</p></div>
+                        <div class="row mona-sans"><p class="hero-promo-date">THIS MARCH</p></div>
+                        <div class="row">
+                            <div class="btn-wrapper">
+                                <button class="btn-primary clickable">
+                                    EXPLORE EVENTS
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-promo">
+                    <img src="/media/hero.svg" alt="HERO PROMO"/>
+                </div>
+            </div>
+        </section> -->
+        <!-- <section class="about-wrapper">
+            <div class="about-us container v-flex justify-center">
+                <div class="col-12">
+                    <div class="row container v-flex content justify-end align-center">
+                        <div class=" v-flex gap-45">
+                            <div class="row fg-white justify-center text-center">
+                                <h2><span class="fg-cyan">COME JOIN THE FUN</span><br>BLIT<span class="hollow-txt1 fg-grad-primary" style="font-size: 3rem;">ZKRI</span>EG '23</h2>
+                            </div>
+                            <div class="row fg-white text-center justify-center">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                    <br><br>
+                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                                    <br><br>
+                                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                            </div>
+                            <div class="row justify-center">
+                                <div class="btn-wrapper">
+                                    <button class="btn-primary clickable">
+                                        MEET OUR TEAM
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row container justify-center sponsors-container">
+                        <div class="col-11">
+                            <div class="row fg-white mona-sans">Sponsored By</div>
+                            <div class="row container justify-center">
+                                <div class="col-1 google-logo">
+                                    <div class="row"><img src="/media/google_logo.png" alt=""></div>
+                                </div>
+                                <div class="col-1 meta-logo">
+                                    <div class="row"><img src="/media/meta_logo_.png" alt=""></div>
+                                </div>
+                                <div class="col-1 google-logo">
+                                    <div class="row"><img src="/media/google_logo.png" alt=""></div>
+                                </div>
+                                <div class="col-1 meta-logo">
+                                    <div class="row"><img src="/media/meta_logo_.png" alt=""></div>
+                                </div>
+                                <div class="col-1 google-logo">
+                                    <div class="row"><img src="/media/google_logo.png" alt=""></div>
+                                </div>
+                                <div class="col-1 meta-logo">
+                                    <div class="row"><img src="/media/meta_logo_.png" alt=""></div>
+                                </div>
+                                <div class="col-1 google-logo">
+                                    <div class="row"><img src="/media/google_logo.png" alt=""></div>
+                                </div>
+                                <div class="col-1 meta-logo">
+                                    <div class="row"><img src="/media/meta_logo_.png" alt=""></div>
+                                </div>
+                                <div class="col-1 google-logo">
+                                    <div class="row"><img src="/media/google_logo.png" alt=""></div>
+                                </div>
+                                <div class="col-1 meta-logo">
+                                    <div class="row"><img src="/media/meta_logo_.png" alt=""></div>
+                                </div>
+                                <div class="col-1 google-logo">
+                                    <div class="row"><img src="/media/google_logo.png" alt=""></div>
+                                </div>
+                                <div class="col-1 meta-logo">
+                                    <div class="row"><img src="/media/meta_logo_.png" alt=""></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <section class="hero-wrapper container-fluid d-flex justify-content-center align-center">
+            <div class="hero-bg"></div>
+            <div class="hero row v-flex justify-content-end justify-content-lg-end align-items-center">
+                <div class="col-8 col-sm-8 d-flex justify-center align-center g-5 fg-white">
+                    <h1 class="text-anim text-anim-down">B</h1>
+                    <h1 class="text-anim text-anim-up">L</h1>
+                    <h1 class="text-anim text-anim-down">I</h1>
+                    <h1 class="text-anim text-anim-up">T</h1>
+                    <h1 class="text-anim text-anim-down">Z</h1>
+                    <h1 class="text-anim text-anim-up">K</h1>
+                    <h1 class="text-anim text-anim-down">R</h1>
+                    <h1 class="text-anim text-anim-up">I</h1>
+                    <h1 class="text-anim text-anim-down">E</h1>
+                    <h1 class="text-anim text-anim-up">G</h1>
+                    <h1 class="text-anim text-anim-down"> '</h1>
+                    <h1 class="text-anim text-anim-up">2</h1>
+                    <h1 class="text-anim text-anim-down">3</h1>
+                </div>
+                <div class="col-6 col-lg-2 mb-5">
+                    <button class="btn-primary clickable">
+                        EXPLORE EVENTS
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="about-us container-fluid">
+            
+        </section>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>

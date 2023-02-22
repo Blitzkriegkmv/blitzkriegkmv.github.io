@@ -9,15 +9,15 @@ function mouseMagic() {
     var xp = 0, yp = 0;
      
     $(document).mousemove(function(e){
-      mouseX = e.pageX - 26;
-      mouseY = e.pageY - 26; 
+      mouseX = e.pageX - 40;
+      mouseY = e.pageY - 40; 
     });
       
     setInterval(function(){
       xp += ((mouseX - xp)/6);
       yp += ((mouseY - yp)/6);
       $("#custom-cursor").css({left: xp +'px', top: yp +'px'});
-    }, 20);
+    }, 10);
 
     //Handle click events
     $("*:not(.clickable)").click(function() {
