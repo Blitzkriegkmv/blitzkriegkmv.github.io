@@ -34,7 +34,7 @@ function loadingAnimation() {
     }, 1000);
     setTimeout(function() {
       $(".hero .fade").addClass("show");
-      $(".root").removeClass("overflow-hidden");
+      $("body").removeClass("overflow-hidden");
       $(".header-wrapper").removeClass("d-none");
     }, 3000);
   }, 1000)
