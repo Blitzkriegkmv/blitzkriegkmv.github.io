@@ -15,6 +15,7 @@
 }
 body {
     overflow: overlay;
+    overflow-x: hidden;
 }
 
 *::-webkit-scrollbar {
@@ -182,7 +183,6 @@ a.active {
 	left: 0;
     width: 100%;
     height: 100%;
-	overflow: overlay;
     background: #09081F;
 	background: -webkit-radial-gradient(bottom right, #09081F, #15143B);
 	background: -moz-radial-gradient(bottom right, #09081F, #15143B);
@@ -376,7 +376,7 @@ a.active {
     min-height: 100vh;
 	height: fit-content;
 	background: url("/media/about-section.png") center;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
 }
 .about-us .sponsors-container {
     min-height: 64px;
@@ -392,8 +392,19 @@ a.active {
 .events-wrapper {
     height: 100vh;
     background: transparent;
-    background: url("/media/about-section.png") center;
-    background-attachment: fixed;
+    background: url("/media/events-section.png") center;
+}
+/* -------------- */
+
+/* Footer */
+.footer-wrapper {
+    background-color: #00000099;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    padding: 0px 5rem;
 }
 /* -------------- */
 

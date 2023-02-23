@@ -83,7 +83,7 @@
 /* Starting Animations */
 .text-anim {
     top: 0px;
-    transition: 3s ease-in;
+    transition: 2s ease-in;
     position: relative;
     opacity: 1;
 }
