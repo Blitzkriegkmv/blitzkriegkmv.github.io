@@ -40,7 +40,7 @@ h1,h2,h3,h4,h5,h6 {
     font-family: 'Mona-Sans', sans-serif;
 }
 h1 {
-	font-size: 2.5rem;
+	font-size: calc(3.375rem + 1.5vw);
 	font-weight: 900;
 }
 h2 {
@@ -307,9 +307,9 @@ a.active {
 	height: 100%;
 	top: 0;
 	left: 0;
-	background: url('/media/hero-bg2.png') no-repeat center 80px;
+	background: url('/media/hero-bg2.png') no-repeat center 50%;
 	filter: opacity(70%);
-	background-size: 150%;
+	background-size: 120%;
     z-index: 1;
 }
 .hero {
@@ -399,8 +399,8 @@ a.active {
     }
     /* Hero Styles */
     .hero-bg {
-        background: url('/media/hero-bg2.png') no-repeat center -150px;
-        background-size: 120%;
+        background: url('/media/hero-bg2.png') no-repeat center -400px;
+        background-size: 100%;
     }
 }
 
@@ -408,6 +408,9 @@ a.active {
 @media (min-width: 992px) {
     h1 {
         font-size: 7rem;
+    }
+    .w-lg-25 {
+        width: 25%;
     }
     #custom-cursor {
         display: block;
