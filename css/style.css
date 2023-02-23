@@ -99,18 +99,19 @@ a.active {
 }
 .btn-primary {
 	position: relative;
-	min-width: 200px;
-	height: 50px;
-	min-height: 50px;
+	min-width: 100px;
+    width: calc(100px + 3rem);
+    min-height: 50px;
 	background: linear-gradient(268.91deg, #8034EC -13.06%, #B94EF1 121.73%);
 	overflow: hidden;
 	box-shadow: 4px 3px 6px rgba(191, 191, 191, 0.25);
+    border: 1px solid transparent;
 	border-radius: 15px;
 	border: 0px;
 	font-family: 'Mona-Sans', sans-serif;
 	font-weight: 700;
 	font-size: 0.7rem;
-	line-height: 50px;
+	line-height: 40px;
 	color: #e0e0e0;
 	cursor: pointer;
 	z-index: 401;
@@ -238,6 +239,11 @@ a.active {
 #pre-loader .description {
     animation: fadeInDelayed 4s ease;
 }
+.pre-loader {
+    position: absolute;
+    bottom: 20%;
+    z-index: 10;
+}
 
 
 /* --------------- */
@@ -321,6 +327,25 @@ a.active {
 	background-size: 120%;
     z-index: 1;
 }
+.hero-bg.before {
+    display: none;
+    animation: glitch1 2.5s infinite;
+}
+.hero-bg.after {
+    display: none;
+    animation: glitch2 2.5s infinite;
+}
+.hero-bg.before.glitch {
+    display: block;
+    opacity: 1;
+}
+.hero-bg.after.glitch {
+    display: block;
+}
+.hero-bg.glitch {
+    animation: glitch3 2.5s infinite;
+}
+
 .hero {
 	z-index: 2;
     height: 100%;
@@ -352,40 +377,26 @@ a.active {
     min-height: 100vh;
 	height: fit-content;
 	background: url("/media/about-section.png") center;
+    background-attachment: fixed;
 }
 .about-us .sponsors-container {
-	height: 15%;
+    min-height: 64px;
 }
-.about-us .sponsors-container .col-1 img {
-	height: 64px;
-	min-width: 96px;
-	max-width: 96px;
-	background-size: contain;
+.sponsors-container img{
+    /* height: 24px;
+	max-width: 24px; */
 }
 
 /* --------------- */
 
-/* Responsive styles
-@media only screen and (max-width: 600px) {
-    html {
-        font-size: 12px;
-    }
-	h1 {
-		font-size: 3rem;
-	}
-	p {
-		font-size: 1rem;
-	}
-    #custom-cursor {
-        display: none;
-    }
-    #pre-loader .heading {
-        font-size: 3.2rem;
-    }
-	.header-wrapper {
-		width: 100%;
-	}
-} */
+/* Events Section */
+.events-wrapper {
+    height: 100vh;
+    background: transparent;
+    background: url("/media/about-section.png") center;
+    background-attachment: fixed;
+}
+/* -------------- */
 
 /* Small devices (landscape phones, 576px and up) */
 @media only screen and (min-width: 576px) {

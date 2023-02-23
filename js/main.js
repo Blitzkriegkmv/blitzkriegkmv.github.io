@@ -1,12 +1,27 @@
 $(document).ready(function() {
     mouseMagic();
-
+    loadingAnimation();
     //Mobile Navbar Toggle
     $(".header-wrapper .navbar-toggler").click(function() {
       $(".header-wrapper").toggleClass("active");
     });
     
 })
+
+function loadingAnimation() {
+  setTimeout(function() {
+    $(".hero-bg").removeClass("glitch");
+    $(".pre-loader").fadeOut();
+    $(".hero").removeClass("d-none");
+    setTimeout(function() {
+      $(".hero .text-anim").removeClass("text-anim-up");
+      $(".hero .text-anim").removeClass("text-anim-down");
+    }, 1000);
+    setTimeout(function() {
+      $(".hero .fade").addClass("show");
+    }, 3000);
+  }, 1000)
+}
 
 //Mouse follow Animation
 function mouseMagic() {
