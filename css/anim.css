@@ -40,7 +40,6 @@
     width: 10px;
     height: 10px;
     border-radius: 5px;
-    margin-left: 3rem;
     background-color: #ffffff;
     color: #ffffff;
   }
@@ -84,7 +83,7 @@
 /* Starting Animations */
 .text-anim {
     top: 0px;
-    transition: 3s ease;
+    transition: 3s ease-in;
     position: relative;
     opacity: 1;
 }
