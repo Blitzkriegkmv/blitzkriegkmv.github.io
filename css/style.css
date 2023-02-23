@@ -46,6 +46,9 @@ h1 {
 h2 {
 	font-size: 2.7rem;
 }
+h3 {
+    font-size: calc(2.3rem + .6vw);
+}
 p {
 	font-family: 'Adero Trial', sans-serif;
 	font-size: 0.6rem;
@@ -428,7 +431,7 @@ a.active {
     /* Hero Styles */
     .hero-bg {
         background: url('/media/hero-bg2.png') no-repeat center -600px;
-        background-size: 100%;
+        background-size: 90%;
     }
 }
 
@@ -437,6 +440,6 @@ a.active {
     /* Hero Styles */
     .hero-bg {
         background: url('/media/hero-bg2.png') no-repeat center -800px;
-        background-size: 100%;
+        background-size: 90%;
     }
 }
