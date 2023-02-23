@@ -1,5 +1,10 @@
 $(document).ready(function() {
     mouseMagic();
+
+    //Mobile Navbar Toggle
+    $(".header-wrapper .navbar-toggler").click(function() {
+      $(".header-wrapper").toggleClass("active");
+    });
     
 })
 
