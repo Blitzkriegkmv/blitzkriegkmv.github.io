@@ -44,10 +44,10 @@ h1 {
 	font-weight: 900;
 }
 h2 {
-	font-size: 2.7rem;
+	font-size: calc(1.85rem + .9vw);
 }
 h3 {
-    font-size: calc(2.3rem + .6vw);
+    font-size: calc(2rem + .6vw);
 }
 p {
 	font-family: 'Adero Trial', sans-serif;
@@ -345,12 +345,6 @@ a.active {
 	position: relative;
 	height: 100vh;
 	background: url("/media/about-section.png") center;
-}
-.about-us .content {
-	height: 85%;
-}
-.about-us p {
-	max-width: 600px;
 }
 .about-us .sponsors-container {
 	height: 15%;
