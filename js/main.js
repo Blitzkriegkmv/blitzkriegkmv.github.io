@@ -24,21 +24,6 @@ $(document).ready(function() {
 })
 
 function loadingAnimation() {
-  // setTimeout(function() {
-  //   $(".hero-bg").removeClass("glitch");
-  //   $(".pre-loader").fadeOut();
-  //   $(".hero").removeClass("d-none");
-  //   setTimeout(function() {
-  //     $(".hero .text-anim").removeClass("text-anim-up");
-  //     $(".hero .text-anim").removeClass("text-anim-down");
-  //   }, 1000);
-  //   setTimeout(function() {
-  //     $(".hero .fade").addClass("show");
-  //     $("body").removeClass("overflow-hidden");
-  //     $(".header-wrapper").removeClass("d-none");
-  //     $(".socials-container").removeClass("d-none");
-  //   }, 3000);
-  // }, 1000)
   setTimeout(function() {
     $(".hero-bg").removeClass("glitch");
     $(".pre-loader").fadeOut();
@@ -46,14 +31,29 @@ function loadingAnimation() {
     setTimeout(function() {
       $(".hero .text-anim").removeClass("text-anim-up");
       $(".hero .text-anim").removeClass("text-anim-down");
-    }, 1);
+    }, 1000);
     setTimeout(function() {
       $(".hero .fade").addClass("show");
       $("body").removeClass("overflow-hidden");
       $(".header-wrapper").removeClass("d-none");
       $(".socials-container").removeClass("d-none");
-    }, 3);
-  }, 1)
+    }, 3000);
+  }, 1000)
+  // setTimeout(function() {
+  //   $(".hero-bg").removeClass("glitch");
+  //   $(".pre-loader").fadeOut();
+  //   $(".hero").removeClass("d-none");
+  //   setTimeout(function() {
+  //     $(".hero .text-anim").removeClass("text-anim-up");
+  //     $(".hero .text-anim").removeClass("text-anim-down");
+  //   }, 1);
+  //   setTimeout(function() {
+  //     $(".hero .fade").addClass("show");
+  //     $("body").removeClass("overflow-hidden");
+  //     $(".header-wrapper").removeClass("d-none");
+  //     $(".socials-container").removeClass("d-none");
+  //   }, 3);
+  // }, 1)
 }
 
 //Mouse follow Animation
