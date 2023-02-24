@@ -307,6 +307,7 @@ a.active {
     min-height: calc(100vh - 80px);
     background: url("/media/about-section.png") no-repeat center;
     background-attachment: fixed;
+    background-blend-mode: multiply;
 }
 .sponsors-container > .container {
     margin-top: 50px;
@@ -348,6 +349,7 @@ a.active {
 
 .card {
     position: relative;
+    min-height: 25em;
     width: 20em;
     background-image: var(--bg-shape-color);
     border-radius: 25px;
@@ -356,6 +358,7 @@ a.active {
     transition: all 0.3s ease-in-out;
 }
 .card:hover {
+    background-blend-mode: lighten !important;
     box-shadow: 0 10px 20px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -367,34 +370,28 @@ a.active {
 
 .card__icon {
     position: absolute;
-    width: 4em;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 20px 30px;
     height: 4em;
+    background: linear-gradient(45deg, black, transparent);
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
     transition: all 0.3s ease-in-out;
 }
-.card:hover .card__icon {
+/* .card:hover .card__icon {
     opacity: 0;
     transform: scale(0);
-}
+} */
 
-.card__media {
+/* .card__media {
     padding: 2em 0;
-}
-.card__media svg path {
-    opacity: 0;
-    transition: all 0.3s ease-in-out;
-    transform-origin: center center;
-}
-.card:hover .card__media svg path {
-    -webkit-animation: fadeInScale 0.3s ease-in-out forwards;
-    animation: fadeInScale 0.3s ease-in-out forwards;
-}
-.card:hover .card__media svg path:nth-child(2) {
-    -webkit-animation-delay: 0.1s;
-    animation-delay: 0.1s;
-}
-.card:hover .card__media svg path:nth-child(3) {
-    -webkit-animation-delay: 0.2s;
-    animation-delay: 0.2s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(45deg black transparent);
 }
 .card__media img {
     opacity: 0;
@@ -404,10 +401,23 @@ a.active {
 .card:hover .card__media img {
     -webkit-animation: fadeInScale 0.3s ease-in-out forwards;
     animation: fadeInScale 0.3s ease-in-out forwards;
+} */
+/* .card:hover .card__media svg path:nth-child(2) {
+    -webkit-animation-delay: 0.1s;
+    animation-delay: 0.1s;
 }
+.card:hover .card__media svg path:nth-child(3) {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+} */
 
 .card__header {
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 30px;
+    background: linear-gradient(45deg, black, transparent);
 }
 
 .card__header-title {
@@ -434,6 +444,13 @@ a.active {
 .card:hover .card__header-icon {
     opacity: 1;
     transform: translateX(0);
+}
+
+/* Card Backgrounds */
+#event1Card {
+    background: url('/media/event1Bg.png') no-repeat center, var(--bg-shape-color);
+    background-size: contain;
+    background-blend-mode: luminosity;
 }
 
 /* -------------- */
