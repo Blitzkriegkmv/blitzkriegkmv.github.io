@@ -354,8 +354,7 @@ a.active {
 	position: fixed;
 	bottom: 0;
 	left: 0;
-	height: 20vh;
-	max-height: 320px;
+	height: 150px;
 	width: 60px;
 	background: rgba(217, 217, 217, 0.2);
 	z-index: 999;
@@ -403,7 +402,7 @@ a.active {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 80px;
+    height: 150px;
     padding: 0px 5rem;
 }
 /* -------------- */
