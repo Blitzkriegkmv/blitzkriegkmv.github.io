@@ -22,14 +22,19 @@ $(document).ready(function() {
     });
 
     //Lightbox Animatoion
-    $(".lightbox .close-area").click(function() {
+    $(".lightbox .close-area, .lightbox .close-btn").click(function() {
         $(".lightbox").removeClass("active");
+        $(document.body).removeClass("overflow-hidden");
         //console.log("Click");
     })
     $(".card__header").click(function() {
         lightboxData = $(this).attr("data-toggle");
         $(".lightbox").attr("data-active", lightboxData);
         $(".lightbox").toggleClass("active");
+        $(`.lightbox-wrapper:not([data-id=${lightboxData}])`).addClass("d-none");
+        $(`.lightbox-wrapper[data-id=${lightboxData}]`).removeClass("d-none");
+
+        $('body').addClass("overflow-hidden");
     })
       
   })
