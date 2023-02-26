@@ -54,22 +54,11 @@
       right: 0px;
       top: 100%;
   }
-  20% {
-      right: 100px;
-  }
-  40% {
-      top: 20%;
-  }
   60% {
-      right: 200px;
       top: 30%;
   }
-  80% {
-      right: auto;
-      top: 50%;
-  }
   100% {
-      right: initial;
+      right: 100px;
       top: 30%;
   }
 }
