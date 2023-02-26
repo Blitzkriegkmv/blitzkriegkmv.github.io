@@ -366,6 +366,7 @@ a.active {
 .plx-img {
     position: absolute;
     top: 30%;
+    right: 100px;
     width: 200px;
     height: 200px;
     animation: moveInFade 2s ease-in-out;

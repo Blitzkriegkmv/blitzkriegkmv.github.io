@@ -51,7 +51,7 @@
 }
 @keyframes moveInFade {
   0% {
-      right: 0px;
+      right: -50px;
       top: 100%;
   }
   60% {
