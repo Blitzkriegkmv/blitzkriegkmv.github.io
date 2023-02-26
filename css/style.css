@@ -325,7 +325,20 @@ a.active {
 	filter: opacity(70%);
 	background-size: 120%;
     z-index: 1;
+    animation: glitch 300ms ease-in 0s 3 forwards;
 }
+@keyframes glitch {
+    0% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0.8;
+    }  
+}
+
 .hero-bg.before {
     display: none;
     animation: glitch1 2.5s infinite;
@@ -350,6 +363,25 @@ a.active {
     height: 100%;
     gap: 50px;
 }
+.plx-img {
+    position: absolute;
+    top: 30%;
+    width: 200px;
+    height: 200px;
+    animation: moveInFade 2s ease-in-out;
+}
+.plx-img-2 {
+    position: absolute;
+    top: 30%;
+    left: 20px;
+    width: 200px;
+    height: 200px;
+}
+
+.plx-img-2 img {
+    width: inherit;
+}
+
 .socials-container {
 	position: fixed;
 	bottom: 0;
@@ -443,6 +475,22 @@ a.active {
     .hero-bg {
         background: url('/media/hero-bg2.png') no-repeat center -500px;
         background-size: 100%;
+    }
+    .plx-img {
+        position: absolute;
+        top: calc(100% - 320px);
+        right: 0px;
+        width: 500px;
+        height: 300px;
+        animation: slideInRight 2s;
+    }
+    .plx-img-2 {
+        position: absolute;
+        top: calc(100% - 250px);
+        left: 20px;
+        width: 200px;
+        height: 200px;
+        animation: slideInLeft 2s;
     }
     
 }

@@ -25,8 +25,8 @@ $(document).ready(function() {
 
 function loadingAnimation() {
   setTimeout(function() {
-    $(".hero-bg").removeClass("glitch");
-    $(".pre-loader").fadeOut();
+    // $(".hero-bg").removeClass("glitch");
+    // $(".pre-loader").fadeOut();
     $(".hero").removeClass("d-none");
     setTimeout(function() {
       $(".hero .text-anim").removeClass("text-anim-up");
@@ -38,7 +38,7 @@ function loadingAnimation() {
       $(".header-wrapper").removeClass("d-none");
       $(".socials-container").removeClass("d-none");
     }, 3000);
-  }, 1000)
+  }, 0)
   // setTimeout(function() {
   //   $(".hero-bg").removeClass("glitch");
   //   $(".pre-loader").fadeOut();
