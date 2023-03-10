@@ -54,7 +54,7 @@ h6 {
 }
 p {
 	font-family: 'Adero Trial', sans-serif;
-	font-size: 0.6rem;
+	font-size: 0.8rem;
 }
 a {
 	color: inherit; /* blue colors for links too */
@@ -425,6 +425,9 @@ a.active {
     height: 100vh;
     background: transparent;
     background: url("/media/events-section.png") center;
+}
+.poster-main img {
+    box-shadow: -2px -2px 4px 5px rgba(255, 255, 255, 0.578);
 }
 /* -------------- */
 

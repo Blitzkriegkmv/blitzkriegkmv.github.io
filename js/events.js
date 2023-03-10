@@ -27,8 +27,9 @@ $(document).ready(function() {
         $(document.body).removeClass("overflow-hidden");
         //console.log("Click");
     })
-    $(".card__header").click(function() {
-        lightboxData = $(this).attr("data-toggle");
+    $(".card").click(function() {
+        lightboxData = $(this).find(".card__header").attr("data-toggle");
+        //console.log(lightboxSrc.children());
         $(".lightbox").attr("data-active", lightboxData);
         $(".lightbox").toggleClass("active");
         $(`.lightbox-wrapper:not([data-id=${lightboxData}])`).addClass("d-none");

@@ -447,8 +447,36 @@ a.active {
 #event1Card {
     background: url('/media/event1Bg.png') no-repeat center, var(--bg-shape-color);
     background-size: contain;
-    background-blend-mode: luminosity;
 }
+#event2Card {
+    background: url('/media/posters/TradingTitansv2.png') no-repeat center, var(--bg-shape-color);
+    background-size: contain;
+}
+#event3Card {
+    background: url('/media/posters/webopolyPost1by1_final1.png') no-repeat center, var(--bg-shape-color);
+    background-size: contain;
+}
+#event4Card {
+    background: url('/media/posters/CodeDuelv2.png') no-repeat center, var(--bg-shape-color);
+    background-size: contain;
+}
+#event5Card {
+    background: url('/media/posters/ministryOfMagic.png') no-repeat center, var(--bg-shape-color);
+    background-size: contain;
+}
+#event6Card {
+    background: url('/media/posters/ValorantPoster.png') no-repeat center, var(--bg-shape-color);
+    background-size: contain;
+}
+#event7Card {
+    background: url('/media/posters/ministryOfMagic.png') no-repeat center, var(--bg-shape-color);
+    background-size: contain;
+}
+#event8Card {
+    background: url('/media/posters/ministryOfMagic.png') no-repeat center, var(--bg-shape-color);
+    background-size: contain;
+}
+
 
 /* -------------- */
 
@@ -479,13 +507,12 @@ a.active {
 }
 .lightbox-wrapper {
     position: absolute;
-    top: 50%;
+    top: 20px;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translateX(-50%);
     border-radius: 15px;
     width: 90%;
     min-height: 80%;
-    margin: 15px 0;
     z-index: 1000001;
 }
 .lightbox-img {
@@ -518,6 +545,10 @@ a.active {
 }
 .lightbox .close-btn:hover {
     scale: 1.2;
+}
+.lightbox-content {
+    background-color: #09081F;
+    border-radius: 25px;
 }
 
 /* ------------- */
@@ -552,6 +583,11 @@ a.active {
     .hero-bg {
         background: url('/media/hero-bg2.png') no-repeat center -400px;
         background-size: 100%;
+    }
+    .lightbox-content {
+        margin-top: 0px;
+        background-color: none;
+        border-radius: 25px;
     }
 }
 
