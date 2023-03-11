@@ -445,7 +445,7 @@ a.active {
 
 /* Card Backgrounds */
 #event1Card {
-    background: url('/media/event1Bg.png') no-repeat center, var(--bg-shape-color);
+    background: url('/media/posters/StreamDraw.png') no-repeat center, var(--bg-shape-color);
     background-size: contain;
 }
 #event2Card {
