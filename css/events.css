@@ -449,7 +449,7 @@ a.active {
     background-size: contain;
 }
 #event2Card {
-    background: url('/media/posters/tradingTitansv2.png') no-repeat center, var(--bg-shape-color);
+    background: url('/media/posters/TradingTitansv2.png') no-repeat center, var(--bg-shape-color);
     background-size: contain;
 }
 #event3Card {
