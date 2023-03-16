@@ -445,35 +445,35 @@ a.active {
 
 /* Card Backgrounds */
 #event1Card {
-    background: url('/media/posters/StreamDraw.png') no-repeat center, var(--bg-shape-color);
+    background: url('/media/posters/StreamDraw.webp') no-repeat center, var(--bg-shape-color);
     background-size: contain;
 }
 #event2Card {
-    background: url('/media/posters/TradingTitansv2.png') no-repeat center, var(--bg-shape-color);
+    background: url('/media/posters/TradingTitansv2.webp') no-repeat center, var(--bg-shape-color);
     background-size: contain;
 }
 #event3Card {
-    background: url('/media/posters/webopolyPost1by1_final1.jpg') no-repeat center, var(--bg-shape-color);
+    background: url('/media/posters/webopolyPost1by1_final1.webp') no-repeat center, var(--bg-shape-color);
     background-size: contain;
 }
 #event4Card {
-    background: url('/media/posters/CodeDuelv2.png') no-repeat center, var(--bg-shape-color);
+    background: url('/media/posters/CodeDuelv2.webp') no-repeat center, var(--bg-shape-color);
     background-size: contain;
 }
 #event5Card {
-    background: url('/media/posters/ministryOfMagic.png') no-repeat center, var(--bg-shape-color);
+    background: url('/media/posters/ministryOfMagic.webp') no-repeat center, var(--bg-shape-color);
     background-size: contain;
 }
 #event6Card {
-    background: url('/media/posters/ValorantPoster.jpg') no-repeat center, var(--bg-shape-color);
+    background: url('/media/posters/ValorantPoster.webp') no-repeat center, var(--bg-shape-color);
     background-size: contain;
 }
 #event7Card {
-    background: url('/media/posters/creepy_crypt_hunt.jpg') no-repeat center, var(--bg-shape-color);
+    background: url('/media/posters/creepy_crypt_hunt.webp') no-repeat center, var(--bg-shape-color);
     background-size: contain;
 }
 #event8Card {
-    background: url('/media/posters/AITANK.jpg') no-repeat center, var(--bg-shape-color);
+    background: url('/media/posters/AITANK.webp') no-repeat center, var(--bg-shape-color);
     background-size: contain;
 }
 
@@ -522,7 +522,7 @@ a.active {
     height: 100%;
     width: 100%;
     border-radius: 25px;
-    /* background: url(/media/lightBoxCardBg1.png), url(/media/noise_texture.png), linear-gradient(to top, #370083, #2e0123, #7b44a5b8, #343b6257, #75dd6436); */
+    /* background: url(/media/lightBoxCardBg1.webp), url(/media/noise_texture.webp), linear-gradient(to top, #370083, #2e0123, #7b44a5b8, #343b6257, #75dd6436); */
     background: #09081F;
     /* background-blend-mode: multiply, overlay;
     background-size: cover, 20%; */
