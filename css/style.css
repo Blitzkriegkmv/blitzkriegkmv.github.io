@@ -496,6 +496,9 @@ a.active {
         height: 200px;
         animation: slideInLeft 2s;
     }
+    .hero {
+        margin-top: 130px;
+    }
     
 }
 
@@ -505,6 +508,10 @@ a.active {
     .hero-bg {
         background: url('/media/hero-bg2.png') no-repeat center -600px;
         background-size: 90%;
+    }
+    .hero {
+        margin-top: 290px;
+        height: 75%;
     }
 }
 
