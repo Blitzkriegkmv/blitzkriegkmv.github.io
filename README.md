@@ -1,2 +1,2 @@
 # Website
-Visit live at: https://blitzkriegkmv.tech/
+Visit live at: https://blitzkriegkmv.github.io
