@@ -443,35 +443,35 @@ a.active {
 
 /* Card Backgrounds */
 #event1Card {
-    background: url("/media/posters'24/JOB WARS.png") no-repeat center, var(--bg-shape-color);
+    background: url("/media/posters_24/JOB WARS.png") no-repeat center, var(--bg-shape-color);
     background-size: contain;
 }
 #event2Card {
-    background: url("/media/posters'24/ACE THE QUIZ.png") no-repeat center, var(--bg-shape-color);
+    background: url("/media/posters_24/ACE THE QUIZ.png") no-repeat center, var(--bg-shape-color);
     background-size: contain;
 }
 #event3Card {
-    background: url("/media/posters'24/FINDING MEME-O.png") no-repeat center, var(--bg-shape-color);
+    background: url("/media/posters_24/FINDING MEME-O.png") no-repeat center, var(--bg-shape-color);
     background-size: contain;
 }
 #event4Card {
-    background: url("/media/posters'24/CODE DUEL.png") no-repeat center, var(--bg-shape-color);
+    background: url("/media/posters_24/CODE DUEL.png") no-repeat center, var(--bg-shape-color);
     background-size: contain;
 }
 #event5Card {
-    background: url("/media/posters'24/BGMI SHOWDOWN.png") no-repeat center, var(--bg-shape-color);
+    background: url("/media/posters_24/BGMI SHOWDOWN.png") no-repeat center, var(--bg-shape-color);
     background-size: contain;
 }
 #event6Card {
-    background: url("/media/posters'24/placeholder.jpg") no-repeat center, var(--bg-shape-color);
+    background: url("/media/posters_24/placeholder.jpg") no-repeat center, var(--bg-shape-color);
     background-size: contain;
 }
 #event7Card {
-    background: url("/media/posters'24/placeholder.jpg") no-repeat center, var(--bg-shape-color);
+    background: url("/media/posters_24/placeholder.jpg") no-repeat center, var(--bg-shape-color);
     background-size: contain;
 }
 #event8Card {
-    background: url("/media/posters'24/WEB BUGS.png") no-repeat center, var(--bg-shape-color);
+    background: url("/media/posters_24/WEB BUGS.png") no-repeat center, var(--bg-shape-color);
     background-size: contain;
 }
 
