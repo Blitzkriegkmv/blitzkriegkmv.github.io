@@ -416,9 +416,7 @@ header a:hover {
 	overflow: hidden;
 	background: radial-gradient(95.02% 150.69% at 59.46% 143.15%, #000000 0%, rgba(0, 0, 0, 0) 100%);
 }
-.hero-content-main  {
-	/* font-size: 2rem; */
-}
+
 .hero-promo-date {
 	height: 70px;
 	line-height: 70px;

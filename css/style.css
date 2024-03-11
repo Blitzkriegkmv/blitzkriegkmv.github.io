@@ -49,9 +49,7 @@ h2 {
 h3 {
     font-size: calc(2rem + .6vw);
 }
-h6 {
 
-}
 p {
 	font-family: 'Adero Trial', sans-serif;
 	font-size: 0.8rem;
@@ -311,6 +309,8 @@ a.active {
 /* --------------- */
 
 /* Hero Section Styles */
+
+
 .hero-wrapper {
 	position: relative;
 	height: 100vh;
@@ -321,7 +321,7 @@ a.active {
 	height: 100%;
 	top: 0;
 	left: 0;
-	background: url('/media/hero-bg2.png') no-repeat center 50%;
+	background: url('/media/bgimg3.jpg') no-repeat center 50%;
 	filter: opacity(70%);
 	background-size: 120%;
     z-index: 1;
@@ -363,26 +363,56 @@ a.active {
     height: 100%;
     gap: 50px;
 }
+
+.hero-wrapper {
+    background-image: url('/media/bgimg3.jpg'); /* Replace 'path/to/your/image.jpg' with the actual path to your image */
+    background-size: cover; /* Adjust the background size as needed */
+    background-position: center center; /* Adjust the background position as needed */
+}
+/*
 .plx-img {
     position: absolute;
     top: 30%;
     right: 100px;
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     animation: moveInFade 2s ease-in-out;
 }
+*/
+.blur-background {
+    position: relative;
+}
+
+.blur-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 10%, rgba(0, 0, 0, 0.5) 90%, rgba(0, 0, 0, 0) 100%);
+    backdrop-filter: blur(2px); /* Adjust the blur value as needed */
+    border-radius: inherit;
+    z-index: -1;
+}
 .plx-img-2 {
+    
     position: absolute;
     top: 30%;
     left: 20px;
+    
     width: 200px;
+    
     height: 200px;
 }
 
 .plx-img-2 img {
-    width: inherit;
+    width: 400px;
 }
-
+.plx-img img {
+    width: 600px;
+    padding-right: 100px;
+}
 .socials-container {
 	position: fixed;
 	bottom: 0;
@@ -413,10 +443,7 @@ a.active {
 .about-us .sponsors-container {
     min-height: 64px;
 }
-.sponsors-container img{
-    /* height: 24px;
-	max-width: 24px; */
-}
+
 
 /* --------------- */
 
@@ -459,7 +486,7 @@ a.active {
     }
     /* Hero Styles */
     .hero-bg {
-        background: url('/media/hero-bg2.png') no-repeat center -400px;
+        background: url('/media/bgimg3.jpg') no-repeat center -400px;
         background-size: 100%;
     }
 }
@@ -477,7 +504,7 @@ a.active {
     }
     /* Hero Styles */
     .hero-bg {
-        background: url('/media/hero-bg2.png') no-repeat center -500px;
+        background: url('/media/bgimg3.jpg') no-repeat center -500px;
         background-size: 100%;
     }
     .plx-img {
@@ -506,7 +533,7 @@ a.active {
 @media (min-width: 1200px) {
     /* Hero Styles */
     .hero-bg {
-        background: url('/media/hero-bg2.png') no-repeat center -600px;
+        background: url('/media/bgimg3.jpg') no-repeat center -600px;
         background-size: 90%;
     }
     .hero {
@@ -519,7 +546,7 @@ a.active {
 @media (min-width: 1400px) {
     /* Hero Styles */
     .hero-bg {
-        background: url('/media/hero-bg2.png') no-repeat center -800px;
+        background: url('/media/bgimg3.jpg') no-repeat center -800px;
         background-size: 90%;
     }
 }

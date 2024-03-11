@@ -60,9 +60,7 @@ h2 {
 h3 {
     font-size: calc(2rem + .6vw);
 }
-h6 {
 
-}
 p {
 	font-family: 'Adero Trial', sans-serif;
 }
@@ -445,35 +443,35 @@ a.active {
 
 /* Card Backgrounds */
 #event1Card {
-    background: url('/media/posters/StreamDraw.webp') no-repeat center, var(--bg-shape-color);
+    background: url("/media/posters'24/JOB WARS.png") no-repeat center, var(--bg-shape-color);
     background-size: contain;
 }
 #event2Card {
-    background: url('/media/posters/TradingTitansv2.webp') no-repeat center, var(--bg-shape-color);
+    background: url("/media/posters'24/ACE THE QUIZ.png") no-repeat center, var(--bg-shape-color);
     background-size: contain;
 }
 #event3Card {
-    background: url('/media/posters/webopolyPost1by1_final1.webp') no-repeat center, var(--bg-shape-color);
+    background: url("/media/posters'24/FINDING MEME-O.png") no-repeat center, var(--bg-shape-color);
     background-size: contain;
 }
 #event4Card {
-    background: url('/media/posters/CodeDuelv2.webp') no-repeat center, var(--bg-shape-color);
+    background: url("/media/posters'24/CODE DUEL.png") no-repeat center, var(--bg-shape-color);
     background-size: contain;
 }
 #event5Card {
-    background: url('/media/posters/ministryOfMagic.webp') no-repeat center, var(--bg-shape-color);
+    background: url("/media/posters'24/BGMI SHOWDOWN.png") no-repeat center, var(--bg-shape-color);
     background-size: contain;
 }
 #event6Card {
-    background: url('/media/posters/ValorantPoster.webp') no-repeat center, var(--bg-shape-color);
+    background: url("/media/posters'24/placeholder.jpg") no-repeat center, var(--bg-shape-color);
     background-size: contain;
 }
 #event7Card {
-    background: url('/media/posters/creepy_crypt_hunt.webp') no-repeat center, var(--bg-shape-color);
+    background: url("/media/posters'24/placeholder.jpg") no-repeat center, var(--bg-shape-color);
     background-size: contain;
 }
 #event8Card {
-    background: url('/media/posters/AITANK.webp') no-repeat center, var(--bg-shape-color);
+    background: url("/media/posters'24/WEB BUGS.png") no-repeat center, var(--bg-shape-color);
     background-size: contain;
 }
 
