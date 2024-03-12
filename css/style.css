@@ -503,8 +503,7 @@ a.active {
         display: none; /* hide the images on small devices */
     }
 	.TextForMobile::before{
-		content: "BLITZKRIEG",
-		text-align: center;
+		content: "BLITZKRIEG";
 	}
 
 }
