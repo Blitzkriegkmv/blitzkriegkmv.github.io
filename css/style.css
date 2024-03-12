@@ -482,16 +482,8 @@ a.active {
 	.plx-img-2{
 		display: none;
 	}
-  .header img {
+  .text-anim-wrapper{
     display: none; /* hide the BLITZKRIEG image on small devices */
-  }
-
-  .main img {
-    display: none; /* hide the left_new_1 and right_new_1 images on small devices */
-  }
-
-  .main h1 {
-    font-size: 2em; /* adjust font size for smaller screens */
   }
 }
 
