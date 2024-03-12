@@ -507,43 +507,43 @@ a.active {
     display: none; /* hide the images on small devices */
   }
 	
-	.text-anim-wrapper #id1 {
+	.text-anim text-anim-down #id1 {
 		content: "B";
     display: inline-block;
 }
-	.text-anim-wrapper #id2 {
+	.text-anim text-anim-up #id2 {
 		content: "L";
     display: inline-block;
 }
-	.text-anim-wrapper #id3 {
+	.text-anim text-anim-down #id3 {
 		content: "I";
     display: inline-block;
 }
-	.text-anim-wrapper #id4 {
+	.text-anim text-anim-up #id4 {
 		content: "T";
     display: inline-block;
 }
-	.text-anim-wrapper #id5 {
+	.text-anim text-anim-down #id5 {
 		content: "Z";
     display: inline-block;
 }
-	.text-anim-wrapper #id6 {
+	.text-anim text-anim-up #id6 {
 		content: "K";
     display: inline-block;
 }
-	.text-anim-wrapper #id7 {
+	.text-anim text-anim-down #id7 {
 		content: "R";
     display: inline-block;
 }
-	.text-anim-wrapper #id8 {
+	.text-anim text-anim-up #id8 {
 		content: "I";
     display: inline-block;
 }
-	.text-anim-wrapper #id9 {
+	.text-anim text-anim-down #id9 {
 		content: "E";
     display: inline-block;
 }
-	.text-anim-wrapper #id10 {
+	.text-anim text-anim-up #id10 {
 		content: "G";
     display: inline-block;
 }
