@@ -502,56 +502,10 @@ a.active {
     .text-anim-wrapper img {
         display: none; /* hide the images on small devices */
     }
+	.TextForMobile::before{
+		content: "BLITZKRIEG"
+	}
 
-    #id1.text-anim-down::before {
-        content: "B";
-        display: inline-block;
-    }
-
-    #id2.text-anim-up::before {
-        content: "L";
-        display: inline-block;
-    }
-
-    #id3.text-anim-down::before {
-        content: "I";
-        display: inline-block;
-    }
-
-    #id4.text-anim-up::before {
-        content: "T";
-        display: inline-block;
-    }
-
-    #id5.text-anim-down::before {
-        content: "Z";
-        display: inline-block;
-    }
-
-    #id6.text-anim-up::before {
-        content: "K";
-        display: inline-block;
-    }
-
-    #id7.text-anim-down::before {
-        content: "R";
-        display: inline-block;
-    }
-
-    #id8.text-anim-up::before {
-        content: "I";
-        display: inline-block;
-    }
-
-    #id9.text-anim-down::before {
-        content: "E";
-        display: inline-block;
-    }
-
-    #id10.text-anim-up::before {
-        content: "G";
-        display: inline-block;
-    }
 }
 
 
