@@ -470,10 +470,12 @@ a.active {
 }
 /* -------------- */
 
-/* Small devices (landscape phones, 576px and up) */
+/* Small devices (landscape phones, 576px and up)
 @media only screen and (min-width: 576px) {
 
 }
+*/
+
 /*---mesourabh*/
 .text-anim-wrapper {
   display: flex;
@@ -500,7 +502,7 @@ a.active {
   }
 
   .text-anim-wrapper h1::before {
-    content: attr(data-text); /* use the data-text attribute as content */
+    content: "BLITZKRIEG"; /* use the data-text attribute as content */
     display: inline-block;
   }
 }
