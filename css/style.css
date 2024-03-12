@@ -497,68 +497,63 @@ a.active {
 }
 
 @media only screen and (max-width: 600px) {
-    .plx-img {
-        display: none;
-    }
-
-    .plx-img-2 {
-        display: none;
-    }
-
+    .plx-img,
+    .plx-img-2,
     .text-anim-wrapper img {
         display: none; /* hide the images on small devices */
     }
 
-    .text-anim-down #id1::before {
+    #id1.text-anim-down::before {
         content: "B";
         display: inline-block;
     }
 
-    .text-anim-up #id2::before {
+    #id2.text-anim-up::before {
         content: "L";
         display: inline-block;
     }
 
-    .text-anim-down #id3::before {
+    #id3.text-anim-down::before {
         content: "I";
         display: inline-block;
     }
 
-    .text-anim-up #id4::before {
+    #id4.text-anim-up::before {
         content: "T";
         display: inline-block;
     }
 
-    .text-anim-down #id5::before {
+    #id5.text-anim-down::before {
         content: "Z";
         display: inline-block;
     }
 
-    .text-anim-up #id6::before {
+    #id6.text-anim-up::before {
         content: "K";
         display: inline-block;
     }
 
-    .text-anim-down #id7::before {
+    #id7.text-anim-down::before {
         content: "R";
         display: inline-block;
     }
 
-    .text-anim-up #id8::before {
+    #id8.text-anim-up::before {
         content: "I";
         display: inline-block;
     }
 
-    .text-anim-down #id9::before {
+    #id9.text-anim-down::before {
         content: "E";
         display: inline-block;
     }
 
-    .text-anim-up #id10::before {
+    #id10.text-anim-up::before {
         content: "G";
         display: inline-block;
     }
 }
+
 
 /*----mesourabh*/
 
