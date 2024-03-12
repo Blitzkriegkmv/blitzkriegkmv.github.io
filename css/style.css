@@ -474,6 +474,19 @@ a.active {
 @media only screen and (min-width: 576px) {
 
 }
+@media only screen and (max-width: 600px) {
+  .header img {
+    display: none; /* hide the BLITZKRIEG image on small devices */
+  }
+
+  .main img {
+    display: none; /* hide the left_new_1 and right_new_1 images on small devices */
+  }
+
+  .main h1 {
+    font-size: 2em; /* adjust font size for smaller screens */
+  }
+}
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
