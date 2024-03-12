@@ -504,7 +504,7 @@ a.active {
     }
 	.TextForMobile::before{
 		content: "BLITZKRIEG",
-		text-align: center
+		text-align: center;
 	}
 
 }
