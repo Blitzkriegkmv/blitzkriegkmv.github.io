@@ -196,8 +196,8 @@ a.active {
 }
 /* --------------- */
 
-/* Custom Cursor Styles */
-#custom-cursor {
+/* Custom Cursor Styles*/
+/*#custom-cursor {
 	display: none;
     position: absolute;
     width: 96px;
@@ -208,7 +208,7 @@ a.active {
     pointer-events: none;
     transition: 100ms;
 	z-index: 10000;
-}
+}*/
 
 /* --------------- */
 
