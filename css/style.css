@@ -222,3 +222,55 @@ body {
     line-height: 1.5;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
+
+.unleashed-section {
+    display: flex;
+    align-items: flex-end; /* Align items to the bottom */
+    justify-content: space-between;
+    padding: 3rem 10%;
+    background-color: rgba(32, 32, 32, 1);
+    color: white;
+    text-align: left;
+}
+
+.unleashed-text {
+    max-width: 60%;
+}
+
+.unleashed-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.unleashed-text p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.unleashed-image {
+    max-width: 40%; /* Increased size for better visibility */
+    height: auto;
+    flex-shrink: 0;
+    align-self: flex-end; /* Stick image to the bottom */
+}
+
+@media (max-width: 768px) {
+    .unleashed-section {
+        flex-direction: column; /* Stack text and image vertically */
+        text-align: center;
+        padding: 2rem;
+    }
+
+    .unleashed-text {
+        max-width: 100%; /* Full width for text */
+        margin-bottom: 2rem; /* Add spacing below text */
+    }
+
+    .unleashed-image {
+        max-width: 80%; /* Keep the image large */
+        height: auto;
+        align-self: center; /* Center the image */
+    }
+}
