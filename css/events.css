@@ -160,6 +160,34 @@
     }
 }
 
+.register-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background-color: #F44786; /* Default color from home.css */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Stronger shadow */
+}
+
+.register-button:hover {
+    background-color: #ED1B76; /* Hover color from home.css */
+    transform: scale(1.05); /* Slightly bigger on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6); /* Enhanced shadow on hover */
+}
+
+.register-button:active {
+    background-color: #C2185B; /* Slightly darker active color */
+    transform: scale(0.95); /* Slightly smaller on click */
+}
+
 @media (max-width: 768px) {
     .modal-content {
         width: 90%; /* Adjust modal width for smaller screens */
