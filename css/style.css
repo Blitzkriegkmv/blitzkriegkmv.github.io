@@ -159,3 +159,66 @@ body {
         font-size: 0.8rem;
     }
 }
+
+.lore-section {
+    display: flex;
+    align-items: flex-end; /* Align items to the bottom */
+    justify-content: space-between;
+    padding: 3rem 0; /* Removed horizontal padding to make images touch edges */
+    text-align: center;
+    background-color: rgba(48, 48, 48, 0.9);
+    position: relative; /* Ensure proper alignment */
+}
+
+.lore-image {
+    max-width: 20%;
+    flex-shrink: 0;
+    height: auto;
+    align-self: flex-end; /* Stick images to the bottom */
+}
+
+.left-image {
+    margin-right: 0; /* Removed margin to touch the edge */
+}
+
+.right-image {
+    margin-left: 0; /* Removed margin to touch the edge */
+}
+
+.lore-text {
+    max-width: 60%; /* Adjusted width for responsiveness */
+    padding: 0 2rem; /* Added padding for spacing */
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .lore-section {
+        flex-direction: row; /* Keep images on either side */
+        flex-wrap: wrap; /* Allow wrapping for smaller screens */
+        justify-content: space-between;
+        padding: 2rem; /* Added padding for smaller screens */
+    }
+
+    .lore-image {
+        max-width: 30%; /* Adjusted image size for smaller screens */
+        height: auto;
+    }
+
+    .lore-text {
+        max-width: 60%; /* Adjusted width for text */
+        padding: 1rem; /* Added padding for spacing */
+        text-align: center; /* Center text for smaller screens */
+    }
+}
+
+.lore-title {
+    font-size: 2.5rem; /* Increased font size */
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.lore-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
