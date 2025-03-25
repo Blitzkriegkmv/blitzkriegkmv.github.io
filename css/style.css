@@ -244,7 +244,7 @@ body {
 }
 
 .unleashed-text p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.8;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
@@ -273,4 +273,13 @@ body {
         height: auto;
         align-self: center; /* Center the image */
     }
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: rgba(16, 16, 16, 1); /* Darker background color */
+    color: white;
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
