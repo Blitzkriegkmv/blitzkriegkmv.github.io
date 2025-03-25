@@ -81,3 +81,120 @@ body.dark-theme {
     background-color: #1e1e1e;
     color: #e0e0e0;
 }
+
+.team-details {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    padding: 30px;
+    margin-top: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6);
+}
+
+.team-details h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #444;
+    padding-bottom: 10px;
+}
+
+.team-group {
+    margin-bottom: 1.5rem;
+}
+
+.team-group h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.team-group ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.team-group ul li {
+    font-size: 1rem;
+    margin: 0.3rem 0;
+    color: #b0b0b0;
+}
+
+.team-table {
+    width: 90%; /* Reduce the width to shrink the table */
+    margin: 0 auto; /* Center the table horizontally */
+    border-collapse: separate;
+    border-spacing: 0 10px; /* Add spacing between rows */
+    margin-top: 1.5rem;
+}
+
+.team-table th,
+.team-table td {
+    border: none; /* Remove borders for a cleaner look */
+    padding: 15px;
+    text-align: left;
+    vertical-align: top;
+    background-color: #2a2a2a;
+    border-radius: 0; /* Remove rounded corners */
+}
+
+.team-table th:first-child,
+.team-table td:first-child {
+    text-align: center; /* Center-align text in the first column */
+    border-top-left-radius: 10px; /* Round only the outer top-left corner */
+    border-bottom-left-radius: 10px; /* Round only the outer bottom-left corner */
+}
+
+.team-table th:last-child,
+.team-table td:last-child {
+    border-top-right-radius: 10px; /* Round only the outer top-right corner */
+    border-bottom-right-radius: 10px; /* Round only the outer bottom-right corner */
+}
+
+.team-table th {
+    color: #ffffff;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.team-table td {
+    color: #b0b0b0;
+    font-size: 1rem;
+}
+
+.team-table ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.team-table ul li {
+    margin: 0.3rem 0;
+    color: #d0d0d0;
+}
+
+.team-table tr:hover td {
+    background-color: #333; /* Highlight row on hover */
+    transition: background-color 0.3s ease;
+}
+
+.team-table th:nth-child(odd),
+.team-table td:nth-child(odd) {
+    background-color: #252525; /* Slightly darker background for odd columns */
+}
+
+.team-table th:nth-child(even),
+.team-table td:nth-child(even) {
+    background-color: #2a2a2a; /* Slightly lighter background for even columns */
+}
+
+@media (max-width: 600px) {
+    .team-table {
+        width: 100%; /* Make the table full width on small screens */
+    }
+}
