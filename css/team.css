@@ -178,6 +178,22 @@ body.dark-theme {
     color: #d0d0d0;
 }
 
+.team-table ul li {
+    position: relative;
+    padding-bottom: 10px; /* Add space for the horizontal rule */
+}
+
+.team-table ul li:not(:last-child)::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #444; /* Color of the horizontal rule */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
 .team-table tr:hover td {
     background-color: #333; /* Highlight row on hover */
     transition: background-color 0.3s ease;
@@ -196,5 +212,117 @@ body.dark-theme {
 @media (max-width: 600px) {
     .team-table {
         width: 100%; /* Make the table full width on small screens */
+    }
+}
+
+.event-details {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    padding: 30px;
+    margin-top: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6);
+    margin-bottom: 2rem; /* Add margin below the last section */
+}
+
+.event-details h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #444;
+    padding-bottom: 10px;
+}
+
+.event-table {
+    width: 90%; /* Same as team table */
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    margin-top: 1.5rem;
+}
+
+.event-table th,
+.event-table td {
+    border: none;
+    padding: 15px;
+    text-align: left;
+    vertical-align: top;
+    background-color: #2a2a2a;
+    border-radius: 0;
+}
+
+.event-table th:first-child,
+.event-table td:first-child {
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.event-table th:last-child,
+.event-table td:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.event-table th {
+    color: #ffffff;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.event-table td {
+    color: #b0b0b0;
+    font-size: 1rem;
+}
+
+.event-table ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.event-table ul li {
+    margin: 0.3rem 0;
+    color: #d0d0d0;
+}
+
+.event-table ul li {
+    position: relative;
+    padding-bottom: 10px; /* Add space for the horizontal rule */
+}
+
+.event-table ul li:not(:last-child)::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #444; /* Color of the horizontal rule */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.event-table tr:hover td {
+    background-color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.event-table th:nth-child(odd),
+.event-table td:nth-child(odd) {
+    background-color: #252525;
+}
+
+.event-table th:nth-child(even),
+.event-table td:nth-child(even) {
+    background-color: #2a2a2a;
+}
+
+@media (max-width: 600px) {
+    .event-table {
+        width: 100%; /* Full width on small screens */
     }
 }
