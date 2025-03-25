@@ -1,0 +1,83 @@
+body.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.team-carousel {
+    background-color: #1e1e1e;
+    padding: 20px 0;
+    margin-top: 2rem;
+}
+
+.carousel-container {
+    display: flex;
+    gap: 20px;
+}
+
+.carousel-card {
+    width: 180px; /* Set a fixed width for the carousel items */
+    text-align: center;
+    background: #2a2a2a;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    margin: 0 auto; /* Center the card horizontally */
+}
+
+.carousel-card img {
+    width: 100%; /* Adjust to fit within the reduced card width */
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.carousel-card h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.carousel-card p {
+    font-size: 0.9rem;
+    color: #b0b0b0;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.owl-nav {
+    /* center */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.owl-nav button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.owl-nav button:hover {
+    background-color: #555;
+}
+
+.footer {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
