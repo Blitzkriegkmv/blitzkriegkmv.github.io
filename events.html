@@ -1,920 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="consolenine">
+        <meta name="description" content="Blitzkrieg is the annual tech fest of Keshav Mahavidyalaya, University of Delhi.">
+        <meta name="keywords" content="university of delhi, fest, tech, computer, science, delhi, student" >
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/events.css">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="consolenine">
-    <meta name="description" content="Blitzkrieg is the annual tech fest of Keshav Mahavidyalaya, University of Delhi.">
-    <meta name="keywords" content="university of delhi, fest, tech, computer, science, delhi, student">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/events.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="/js/events.js" defer></script>
+        <title>Events | BLITZ - The Computer Science Society of Keshav Mahavidyalaya</title>
+    </head>
+    <body>
+        <nav class="blurry-navbar">
+            <div class="navbar-container">
+                <div class="navbar-logo">BLITZ</div>
+                <div class="navbar-links">
+                    <a href="/" class="nav-link">HOME</a>
+                    <a href="/sponsors.html" class="nav-link">SPONSORS</a>
+                    <a href="/events.html" class="nav-link">EVENTS</a>
+                    <a href="/team.html" class="nav-link">OUR TEAM</a>
+                </div>
+            </div>
+        </nav>
+        <main class="events-container">
+            <h1 class="events-title">Our Events</h1>
+            <div class="events-grid">
+                <div class="event-card" onclick="openModal('frameItRightModal')">
+                    <img src="/media/posters_25/frame_it_right.png" alt="Frame It Right" class="event-image">
+                    <div class="card-overlay">Click for Info</div>
+                    <h2 class="event-name">Frame It Right</h2>
+                </div>
+                <div class="event-card" onclick="openModal('codeOfDutyModal')">
+                    <img src="/media/posters_25/code_of_duty.png" alt="Code of Duty" class="event-image">
+                    <div class="card-overlay">Click for Info</div>
+                    <h2 class="event-name">Code of Duty</h2>
+                </div>
+                <div class="event-card" onclick="openModal('geekLeagueModal')">
+                    <img src="/media/posters_25/geek_league.png" alt="Geek League" class="event-image">
+                    <div class="card-overlay">Click for Info</div>
+                    <h2 class="event-name">Geek League</h2>
+                </div>
+                <div class="event-card" onclick="openModal('treasureHuntModal')">
+                    <img src="/media/posters_25/treasure_hunt.png" alt="Treasure Hunt" class="event-image">
+                    <div class="card-overlay">Click for Info</div>
+                    <h2 class="event-name">Treasure Hunt</h2>
+                </div>
+                <div class="event-card" onclick="openModal('finalArgumentModal')">
+                    <img src="/media/posters_25/the_final_argument.png" alt="The Final Argument" class="event-image">
+                    <div class="card-overlay">Click for Info</div>
+                    <h2 class="event-name">The Final Argument</h2>
+                </div>
+                <div class="event-card" onclick="openModal('bgmiModal')">
+                    <img src="/media/posters_25/BGMI.png" alt="BGMI" class="event-image">
+                    <div class="card-overlay">Click for Info</div>
+                    <h2 class="event-name">BGMI Battle Royale</h2>
+                </div>
+                <div class="event-card" onclick="openModal('beyondAbstractModal')">
+                    <img src="/media/posters_25/beyond_the_abstract.png" alt="Beyond the Abstract" class="event-image">
+                    <div class="card-overlay">Click for Info</div>
+                    <h2 class="event-name">Beyond the Abstract</h2>
+                </div>
+            </div>
+        </main>
 
-    <title>BLITZ - The Computer Science Society of Keshav Mahavidyalaya</title>
-</head>
-
-<body>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-128ZQQNK9P"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-128ZQQNK9P');
-    </script>
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-        <symbol id="bootstrap" viewBox="0 0 118 94">
-            <title>Bootstrap</title>
-            <path fill-rule="evenodd" clip-rule="evenodd"
-                d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z">
-            </path>
-        </symbol>
-        <symbol id="facebook" viewBox="0 0 16 16">
-            <path
-                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z">
-            </path>
-        </symbol>
-        <symbol id="instagram" viewBox="0 0 16 16">
-            <path
-                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z">
-            </path>
-        </symbol>
-        <symbol id="twitter" viewBox="0 0 16 16">
-            <path
-                d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z">
-            </path>
-        </symbol>
-    </svg>
-    <!-- Custom Cursor Container -->
-    <!--<div id="custom-cursor">-->
-
-    </div>
-    <!-- Main Body Wrapper -->
-    <!-- Main Header -->
-    <div class="lightbox" data-active="1">
-        <div class="close-area"></div>
-        <div class="lightbox-wrapper d-flex" data-id="1">
-            <div class="container py-5">
-                <div class="row lightbox-content">
-                    <div class="col-12 col-md-4 container">
-                        <div class="row d-flex flex-row flex-md-column justify-center align-center h-100">
-                            <div class="col-10 h-50 lightbox-poster">
-                                <img src="/media/posters_24/JOB WARS.png" alt="" class="w-100">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-8 mt-5 pt-5 container lightbox-details">
-                        <div class="row fg-white px-5 px-md-2">
-                            <div class="col-12 border-bottom border-3 border-white text-center text-md-start pb-3">
-                                <h3 class="fw-900">The Final Argument</h3>
-                                <h5><span class="fg-cyan"> Timings </span><br> 11:30 A.M. - 01:30 P.M.
-                                </h5>
-                                <h5><span class="fg-cyan"> Team Size </span><br> Individual </h5>
-                            </div>
-                        </div>
-                        <div class="row fg-white px-md-1 mt-3">
-                            <div class="col-12 col-md-10 text-center text-md-start">
-                                <p>
-                                    📌 Open to all courses.<br><br>
-                                    <span class="fg-cyan">Overview</span><br>
-
-                                    A multi-level debate focusing on the impact of AI on human employment scenarios.
-                                    The competition consists of two levels – a Group Discussion followed by a Conventional Debate.
-                                    Participants will delve into the theme, exploring AI's influence on the job market,
-                                    with the top performers advancing to the debate round. Engage in this thought-provoking
-                                    discussion and showcase your analytical prowess!
-                                    <br><br>📝Disqualification for unfair practices or disruptive behavior.
-                                    <br>📝 Adherence to assigned topics and constructive contributions.
-                                    <br>📝 Fluent expression in the preferred language.
-                                    <br>📍 Active participation, logical arguments, and respectful conduct are crucial with them.
-                                    <br>📍 Top participants proceed to the debate based on performance.
-
-                                    <br><br>🏆Don't miss the chance to win exciting cash prizes and be part of a dynamic discussion shaping the future of AI and employment! 🏆<br><br>
-
-                                    
-
-                                    Enter now and let your creativity shine!
-                                </p>
-                                <p>
-                                    <span class="fg-cyan">Student Co-ordinators</span><br>
-                                    Sundarm Yadav - <span class="mona-sans">9819768005</span><br>
-                                    Aleesha Singh - <span class="mona-sans">8826046055</span>
-                                </p>
-
-                            </div>
-                        </div>
-                        <div class="row fg-white px-5 px-md-1 mt-3">
-                            <div class="col-12 col-md-6 mb-3 text-center text-md-start">
-                                <a href="https://forms.gle/nyofzA9mVvCYRBxGA" target="_blank"><button
-                                        class="btn-primary">Register</button></a>
-                            </div>
-                        </div>
+        <!-- Modals -->
+        <div id="frameItRightModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('frameItRightModal')">&times;</span>
+                <div class="modal-body">
+                    <img src="/media/posters_25/frame_it_right.png" alt="Frame It Right Poster" class="modal-poster">
+                    <div class="modal-details">
+                        <h2>Frame It Right – The Ultimate Website Prototype Challenge! 🎨💻</h2>
+                        <p>Are you ready to think fast, design faster? BLITZKRIEG’25 presents Frame It Right, a high-speed web design challenge where creativity meets strategy!</p>
+                        <p><strong>Team Size:</strong> 2 members per team</p>
+                        <p><strong>Platform:</strong> Figma (No external design assets allowed)</p>
+                        <p><strong>Date:</strong> 2nd April 2025</p>
+                        <p><strong>Reporting Time:</strong> 10:30 AM</p>
+                        <p><strong>Venue:</strong> Keshav Mahavidyalaya, University of Delhi</p>
+                        <p><strong>Competition Format:</strong></p>
+                        <ul>
+                            <li>Theme Reveal (First 5 min): Each team draws a random design theme.</li>
+                            <li>Midway Twist (After 45 min): A surprise challenge will shake up your design!</li>
+                            <li>Final Pitch (Last 15 min): A 2-minute presentation showcasing creativity & execution.</li>
+                        </ul>
+                        <p><strong>Contact:</strong> <br>Priyanshi Jain - 96253 17445 <br>Nancy Gupta - 92609 38565 <br>Isha Sharma - 93546 45681</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="lightbox-wrapper d-flex" data-id="2">
-            <div class="container py-5">
-                <div class="row lightbox-content">
-                    <div class="col-12 col-md-4 container">
-                        <div class="row d-flex flex-row flex-md-column justify-center align-center h-100">
-                            <div class="col-10 h-50 lightbox-poster">
-                                <img src="/media/posters_24/ACE THE QUIZ.png" alt="" class="w-100">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-8 mt-5 pt-5 container lightbox-details">
-                        <div class="row fg-white px-5 px-md-2">
-                            <div class="col-12 border-bottom border-3 border-white text-center text-md-start pb-3">
-                                <h3 class="fw-900">Geek League</h3>
-                                <h5><span class="fg-cyan"> Timings </span><br> 01:30 P.M. - 03:30 P.M.
-                                </h5>
-                                <h5><span class="fg-cyan"> Team Size </span><br> 2 Members </h5>
-                            </div>
-                        </div>
-                        <div class="row fg-white px-md-1 mt-3">
-                            <div class="col-12 col-md-10 text-center text-md-start">
-                                <p>
-                                    📌 Open to all courses.
-                                    📌 Cross college team is allowed. <br><br>
-                                    <span class="fg-cyan">Overview</span><br>
 
-                                    <span style="font-weight: bolder;">Phase 1: Pen and Paper Round</span><br>
-                                    <span style="font-weight: bolder;">Description:</span><br>
-                                    The Pen and Paper Round is the first phase of the Tech Quiz Competition, designed to assess
-                                    participants' knowledge and problem-solving skills in a timed environment.
-                                    During this phase, questions will be displayed on the screen, and each team must
-                                    provide their answers independently without any discussion or external assistance.<br><br>
-
-                                    <span style="font-weight: bolder;">Rules:</span><br>
-                                    📝 Participants are only allowed to use pen and paper to record their answers.<br>
-                                    📝 Any attempt to cheat or use unauthorized materials during the round will result in immediate disqualification.<br><br>
-                                    
-                                    <span style="font-weight: bolder;">Phase 2: Card Game Round</span><br>
-                                    <span style="font-weight: bolder;">Description:</span><br>
-                                    A deck of cards consisting of tech-related questions categorized into three levels:
-                                    easy, medium, and hard will be placed,
-                                    From which each team will have to draw a card and answer the question from the card.<br><br>
-
-                                    <span style="font-weight: bolder;">Rules:</span><br>
-                                    📍 Each team has a limited time to answer the question. If they fail to answer within the allotted time, they forfeit the opportunity to earn points for that question.<br>
-                                    📍 Further details regarding the rules will be provided in the rulebook, which you will receive upon joining the WhatsApp group post-registration.<br><br>
-                                    
-                                    🏆Winners have exciting prizes in store for them!🏆<br>
-                                    Don't miss your chance to be part of this thrilling quest of knowledge at BLITZKRIEG'24.<br>
-                                    Register now and showcase your expertise!
-                                </p><br><br>
-                                <p>
-                                    <span class="fg-cyan">Student Co-ordinators</span><br>
-                                    Priyanshi Jain - <span class="mona-sans">9625317445</span><br>
-                                    Anjali - <span class="mona-sans">9334286212</span>
-                                </p>
-
-                            </div>
-                        </div>
-                        <div class="row fg-white px-5 px-md-1 mt-3">
-                            <div class="col-12 col-md-6 mb-3 text-center text-md-start">
-                                <a href="https://forms.gle/WWaYDpxHuXhPHhtV9" target="_blank"><button
-                                        class="btn-primary">Register</button></a>
-                            </div>
-                        </div>
+        <div id="codeOfDutyModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('codeOfDutyModal')">&times;</span>
+                <div class="modal-body">
+                    <img src="/media/posters_25/code_of_duty.png" alt="Code of Duty Poster" class="modal-poster">
+                    <div class="modal-details">
+                        <h2>Code of Duty – The Ultimate Algorithmic Battle 🎯🔥</h2>
+                        <p>Prepare for the ultimate DSA showdown at BLITZKRIEG’25! Crack complex coding challenges, optimize your solutions, and climb the leaderboard in this high-stakes competition.</p>
+                        <p><strong>Team Size:</strong> Individual or Team of 2</p>
+                        <p><strong>Date:</strong> 2nd April 2025</p>
+                        <p><strong>Time:</strong> 11:30 AM – 1:00 PM</p>
+                        <p><strong>Venue:</strong> Keshav Mahavidyalaya, University of Delhi</p>
+                        <p><strong>Competition Format:</strong></p>
+                        <ul>
+                            <li>Platform: HackerRank (Ensure you have an active account)</li>
+                            <li>Duration: 90 minutes</li>
+                            <li>Questions: 6 (2 Easy | 2 Medium | 2 Hard)</li>
+                            <li>Scoring: Full points for passing all test cases, no negative marking</li>
+                            <li>Tiebreaker: Based on submission time & problem-solving sequence</li>
+                        </ul>
+                        <p><strong>Contact:</strong> <br>Sourabh - 95820 56853 <br>Kanishka - 70175 84908</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="lightbox-wrapper d-flex" data-id="3">
-            <div class="container py-5">
-                <div class="row lightbox-content">
-                    <div class="col-12 col-md-4 container">
-                        <div class="row d-flex flex-row flex-md-column justify-center align-center h-100">
-                            <div class="col-10 h-50 lightbox-poster">
-                                <img src="/media/posters_24/FINDING MEME-O.png" alt="" class="w-100">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-8 mt-5 pt-5 container lightbox-details">
-                        <div class="row fg-white px-5 px-md-2">
-                            <div class="col-12 border-bottom border-3 border-white text-center text-md-start pb-3">
-                                <h3 class="fw-900">The Dalgona Quest</h3>
-                                <h5><span class="fg-cyan"> Timings </span><br> 03:30 P.M. - 05:00 P.M.
-                                </h5>
-                                <h5><span class="fg-cyan"> Team Size </span><br> 3 Members </h5>
-                            </div>
-                        </div>
-                        <div class="row fg-white px-md-1 mt-3">
-                            <div class="col-12 col-md-10 text-center text-md-start">
-                                <p>
-                                    📌 Open to all courses.
-                                    📌 Cross college team is allowed. <br><br>
-                                    <span class="fg-cyan">Overview</span><br>
-                                    Get ready for the ultimate meme quest!
-                                    This treasure hunt event challenges teams of three to showcase their meme mastery.
-                                    From deciphering riddles to locating hidden teammates,
-                                    participants will embark on a journey using their wit, observational skills, and comic expertise.
-                                    The event unfolds in three thrilling rounds, culminating in a race for the treasure.
-                                    Do you have what it takes to be crowned the Meme-lord?
-                                </p>
-                                <p>
-                                    <br>📍 Students are strictly prohibited from causing any physical damage to the props utilized during the event.
-                                    <br>📍 Teams must not harm other individuals or teams during the pursuit of the treasure.
-                                    <br>📝 Decisions made by student coordinators are final and not subject to objections.
-                                </p>
-                                <br>🏆 Winners have exciting prizes in store for them.🏆<br>
-                                <p>
-                                    Don't wait any longer!
-                                    Sign up now!</p>
-                                <p>
-                                    <span class="fg-cyan">Student Co-ordinators</span><br>
-                                    Kanishka Rai - <span class="mona-sans">7017584908</span>
-                                    <br>
-                                    Anjali - <span class="mona-sans">9334286212</span>
-                                </p>
-                                
 
-                            </div>
-                        </div>
-                        <div class="row fg-white px-5 px-md-1 mt-3">
-                            <div class="col-12 col-md-6 mb-3 text-center text-md-start">
-                                <a href="https://forms.gle/NJSm1jdXyJWP1f4b7" target="_blank"><button
-                                    class="btn-primary">Register</button></a>
-                            </div>
-                        </div>
+        <div id="geekLeagueModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('geekLeagueModal')">&times;</span>
+                <div class="modal-body">
+                    <img src="/media/posters_25/geek_league.png" alt="Geek League Poster" class="modal-poster">
+                    <div class="modal-details">
+                        <h2>Geek League – The Ultimate Tech Quiz 🧠⚡</h2>
+                        <p>Think you have what it takes to outsmart the competition? BLITZKRIEG’25 presents Geek League, a high-stakes Tech Quiz Competition designed to test your knowledge, logic, and problem-solving skills!</p>
+                        <p><strong>Team Size:</strong> 2 members</p>
+                        <p><strong>Date:</strong> 2nd April 2025</p>
+                        <p><strong>Time:</strong> 1:30 PM</p>
+                        <p><strong>Venue:</strong> Keshav Mahavidyalaya, University of Delhi</p>
+                        <p><strong>Competition Format:</strong></p>
+                        <ul>
+                            <li>Phase 1 – Pen & Paper Round: MCQs, logic puzzles & tech-based questions (Elimination Round)</li>
+                            <li>Phase 2 – Rapid Fire Round: Quick thinking, fast answers, and no second chances!</li>
+                        </ul>
+                        <p><strong>Contact:</strong> <br>Priyanshi - 96253 17445 <br>Anjali - 93342 86212</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="lightbox-wrapper d-flex" data-id="4">
-            <div class="container py-5">
-                <div class="row lightbox-content">
-                    <div class="col-12 col-md-4 container">
-                        <div class="row d-flex flex-row flex-md-column justify-center align-center h-100">
-                            <div class="col-10 h-50 lightbox-poster">
-                                <img src="/media/posters_24/CODE DUEL.png" alt="" class="w-100">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-8 mt-5 pt-5 container lightbox-details">
-                        <div class="row fg-white px-5 px-md-2">
-                            <div class="col-12 border-bottom border-3 border-white text-center text-md-start pb-3">
-                                <h3 class="fw-900">Code Of Duty</h3>
-                                <h5><span class="fg-cyan"> Timings </span><br> 11:30 A.M. - 01:30 P.M.
-                                </h5>
-                                <h5><span class="fg-cyan"> Team Size </span><br> Individual </h5>
-                            </div>
-                        </div>
-                        <div class="row fg-white px-md-1 mt-3">
-                            <div class="col-12 col-md-10 text-center text-md-start">
-                                <p>
-                                    📌 Open to all courses.<br><br>
-                                    <span class="fg-cyan">Overview</span><br>
-                                    🚀 Calling all coding maestros! Brace yourselves for CODE DUEL 2.0,
-                                    where the coding arena transforms into a battlefield of algorithms and wits. 
-                                    An exhilarating coding competition that will put your abilities to the test
-                                    through an array of coding challenges.
 
-                                    <br>Get your geek on and code your way to fame!!!😎
-                                    <br><br>
-                                    <span style="font-weight: bolder;">Prerequisite</span> : Participants are required to have a pre-existing Hackerrank
-                                    account before participating in the competition.<br>
-                                    📌 Link: <a href="https://www.hackerrank.com/create-account/">To create a hackerrank account</a> 
-                                    <br><br>
-                                    📝The competition comprises of a single round.
-                                    <br>📝 The problem statement will be available in English only.
-                                    <br>📝With each challenge, you'll have the chance to earn points and climb the
-                                    leaderboard.
-                                    <br>📌 All Programming Languages Allowed.
-                                    <br>📌No use of AI tools.🥹
-                                    <br>📌 Plagiarism is strictly prohibited.🙅🏻‍♀️
-
-                                    <br><br> Individual coders, this is your chance to shine –
-                                    face challenges, earn glory, and seize exciting prizes!
-                                    Ready to code your way to victory? Register now and let the games begin! 
-
-                                </p>
-                                <p>
-                                    <span class="fg-cyan">Student Co-ordinators</span><br>
-                                    Sourabh Pal - <span class="mona-sans">9582056853</span>
-                                    <br>
-                                    Kanishka Rai - <span class="mona-sans">7017584908</span>
-                                </p>
-
-                            </div>
-                        </div>
-                        <div class="row fg-white px-5 px-md-1 mt-3">
-                            <div class="col-12 col-md-6 mb-3 text-center text-md-start">
-                                <a href="https://forms.gle/q8JoXbqMWhyiu1k28" target="_blank"><button
-                                        class="btn-primary">Register</button></a>
-                            </div>
-                        </div>
+        <div id="treasureHuntModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('treasureHuntModal')">&times;</span>
+                <div class="modal-body">
+                    <img src="/media/posters_25/treasure_hunt.png" alt="Treasure Hunt Poster" class="modal-poster">
+                    <div class="modal-details">
+                        <h2>Red Light, Green Hunt – The Ultimate Treasure Hunt 🔍💀</h2>
+                        <p>"You have one mission: Find the treasure or face elimination. Every second counts. Every choice matters. Will you make it out… or be left behind?"</p>
+                        <p><strong>Team Size:</strong> 3 members</p>
+                        <p><strong>Date:</strong> 4th April 2025</p>
+                        <p><strong>Reporting Time:</strong> 3:30 PM</p>
+                        <p><strong>Venue:</strong> Keshav Mahavidyalaya, University of Delhi</p>
+                        <p><strong>Competition Format:</strong></p>
+                        <ul>
+                            <li>Round 1 – Red Light, Green Light: Solve riddles strategically while avoiding elimination.</li>
+                            <li>Round 2 – Symbol Cipher: Crack the hidden code to unlock the next clue.</li>
+                            <li>Round 3 – Stepping Stones: Answer correctly to find the right path—or risk falling behind!</li>
+                        </ul>
+                        <p><strong>Contact:</strong> <br>Kanishka Rai - 70175 84908</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="lightbox-wrapper d-flex" data-id="5">
-            <div class="container py-5">
-                <div class="row lightbox-content">
-                    <div class="col-12 col-md-4 container">
-                        <div class="row d-flex flex-row flex-md-column justify-center align-center h-100">
-                            <div class="col-10 h-50 lightbox-poster">
-                                <img src="/media/posters_24/BGMI SHOWDOWN.png" alt="" class="w-100">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-8 mt-5 pt-5 container lightbox-details">
-                        <div class="row fg-white px-5 px-md-2">
-                            <div class="col-12 border-bottom border-3 border-white text-center text-md-start pb-3">
-                                <h3 class="fw-900">BGMI Battle Royale</h3>
-                                <h5><span class="fg-cyan"> Timings </span><br> 01:30 A.M. - 03:30 P.M.
-                                </h5>
-                                <h5><span class="fg-cyan"> Team Size </span><br> 4 Members </h5>
-                            </div>
-                        </div>
-                        <div class="row fg-white px-md-1 mt-3">
-                            <div class="col-12 col-md-10 text-center text-md-start">
-                                <p>
-                                    📌 Open to all courses.
-                                    📌 Cross college team is allowed. <br><br>
-                                    <span class="fg-cyan">Overview</span><br>
-                                    Embrace the Challenge<br>
-                                    Get ready for the three challenging phases<br>
-                                    <span style="font-weight: bolder;">Eliminator Round : </span>Compete to be among the top 5 teams.<br>
-                                    <span style="font-weight: bolder;">Chicken Dinner Round : </span>The top 5 teams vie for victory in a knockout round.<br>
-                                    <span style="font-weight: bolder;">TDM 1v1 : </span>The ultimate face-off between the top 2 teams in a TDM round.<br>
-                                    
-                                    Sign up with your fellow unit, meet the guidelines, and compete for the top rank to win incredible cash prizes.
-                                    Are you prepared to take down the opposition and demonstrate your power?
-                                    Join us for an unforgettable gaming experience and let the battlegrounds witness your prowess!
 
-                                    <br><br>
-                                    
-                                    📌 Fair play is extremely important, any incident of unfair gaming, cheating, or hacking will result in immediate disqualification. 🚫<br>
-                                    📌 Participants can only use their mobile phones to participate, other devices are not allowed. 📱<br>
-                                    📌 Voice conversation only within the game is allowed until the opening and end of each match. 🗣 <br>
-                                    📌 It is expected of all organisers and participants to treat one another with respect, harassment or unsportsmanlike behaviour is not permitted. 🤝<br>
-                                    📌 Teams must adhere to the guidelines and instructions provided by the game developers. 📜<br>
-                                    📌 The decisions made by the organisers are final and enforceable in the case of a conflict. ♖<br>
-
-                                    <br>🏆 Exciting rewards up for the winners 🏆
-                                    <br><br>See you on the battlefield!
-                                    
-
-                                </p><br><br>
-                                <p>
-                                    <span class="fg-cyan">Student Co-ordinators</span><br>
-                                    Sundarm Yadav - <span class="mona-sans">9819768005</span>
-                                    <br>
-                                    Kanishka Rai - <span class="mona-sans">7017584908</span>
-                                </p>
-
-                            </div>
-                        </div>
-                        <div class="row fg-white px-5 px-md-1 mt-3">
-                            <div class="col-12 col-md-6 mb-3 text-center text-md-start">
-                                <a href="https://forms.gle/sAsqfZkFuwDuDSPd7" target="_blank"><button
-                                        class="btn-primary">Register</button></a>
-                            </div>
-                        </div>
+        <div id="finalArgumentModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('finalArgumentModal')">&times;</span>
+                <div class="modal-body">
+                    <img src="/media/posters_25/the_final_argument.png" alt="The Final Argument Poster" class="modal-poster">
+                    <div class="modal-details">
+                        <h2>The Final Argument – The Ultimate Debate Arena 🎯🎤</h2>
+                        <p>Step into the verbal battlefield where tech, ethics, and innovation collide! BLITZKRIEG’25 presents The Final Argument, a high-intensity debate competition where logic reigns supreme.</p>
+                        <p><strong>Date:</strong> 2nd April 2025</p>
+                        <p><strong>Reporting Time:</strong> 10:30 AM</p>
+                        <p><strong>Venue:</strong> Keshav Mahavidyalaya, University of Delhi</p>
+                        <p><strong>Competition Format:</strong></p>
+                        <ul>
+                            <li>Round 1 – Group Discussion: Present strong arguments on a tech-related topic (1.5 min/speaker).</li>
+                            <li>Round 2 – Extempore: Get a random topic, prepare for 3 minutes, and deliver a 2-minute speech.</li>
+                        </ul>
+                        <p><strong>Contact:</strong> <br>Sundaram Yadav - 98197 68005 <br>Aleesha - 88260 46055</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="lightbox-wrapper d-flex" data-id="6">
-            <div class="container py-5">
-                <div class="row lightbox-content">
-                    <div class="col-12 col-md-4 container">
-                        <div class="row d-flex flex-row flex-md-column justify-center align-center h-100">
-                            <div class="col-10 h-50 lightbox-poster">
-                                <img src="/media/posters_24/placeholder.jpg" alt="" class="w-100">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-8 mt-5 pt-5 container lightbox-details">
-                        <div class="row fg-white px-5 px-md-2">
-                            <div class="col-12 border-bottom border-3 border-white text-center text-md-start pb-3">
-                                <h3 class="fw-900">Beyond The Abstract</h3>
-                                <h5><span class="fg-cyan"> Timings </span><br> 02:30 P.M. - 04:30 P.M.
-                                </h5>
-                                <h5><span class="fg-cyan"> Team Size </span><br>5 Members </h5>
-                            </div>
-                        </div>
-                        <div class="row fg-white px-md-1 mt-3">
-                            <div class="col-12 col-md-10 text-center text-md-start">
-                                <p>
-                                    <span class="fg-cyan">Overview</span><br><br>
-                                    Are you brave enough to harness the scorching power of Phoenix🔥,
-                                    or will you embrace the shadowy allure of Viper's sneaky gameplay🐍?
-                                    The choice is yours, Agent🫡. Choose your character and join the fray,
-                                    for this is where legends are made and victory is earned through cunning
-                                    and skill. <br><br>
-                                    Attention all gamers! It's time to gear up and get ready for an epic battle on the
-                                    battlefield of Valorant. So bring your skills and your squad, and get ready to plant
-                                    the spike, defend the site, and take down your enemies with precision and style.
-                                    <br>Remember, this is no ordinary game - this is Valorant. So, expect the unexpected
-                                    and
-                                    be prepared to adapt to any
-                                    situation that comes your way. Let's show everyone what we're made of and make this
-                                    gaming event one to remember!
 
-                                    <br><br>📌Each team works to achieve objectives such as planting or defusing a bomb
-                                    or eliminating
-                                    the enemy team.
-                                    <br>📌With a diverse range of unique agents, each with their own set of abilities,
-                                    you'll need to collaborate and coordinate effectively to outmaneuver and outsmart
-                                    the
-                                    opposing team.
-                                    <br>
-                                    <br>
-                                    <br>📍Teams will consist of five players each. All players must be registered before
-                                    the
-                                    start of the competition.
-                                    <br>📍Any player found using cheats, hacks, or exploits will be immediately
-                                    disqualified
-                                    and banned from future competitions.
-                                    <br>📍If the match ends in a tie, a best-of-three overtime will be played to
-                                    determine the winner.
-                                    <br>📍The tournament organizers reserve the right to modify or change the rules at
-                                    any time.
-                                    <br><br>
-                                    <br>Are you ready, Agents? Let's go!
-                                    <br>See you on the battlefield!
-                                    <br>Winners will get thrilling rewards!🏆
-
-
-
-
-                                </p>
-                                <p>
-                                    <span class="fg-cyan">Student Co-ordinators</span><br>
-                                    Nancy Gupta- <span class="mona-sans">9260938565</span>
-                                    <br>
-                                    Isha Sharma- <span class="mona-sans">9354645681</span>
-                                </p>
-
-                            </div>
-                        </div>
-                        <div class="row fg-white px-5 px-md-1 mt-3">
-                            <div class="col-12 col-md-6 mb-3 text-center text-md-start">
-                                <a href="https://forms.gle/VyvDJoDyGtyk1sF3A" target="_blank"><button
-                                        class="btn-primary">Register</button></a>
-                            </div>
-                        </div>
+        <div id="bgmiModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('bgmiModal')">&times;</span>
+                <div class="modal-body">
+                    <img src="/media/posters_25/BGMI.png" alt="BGMI Poster" class="modal-poster">
+                    <div class="modal-details">
+                        <h2>BGMI Battle Royale – The Ultimate Showdown! 🎮🔥</h2>
+                        <p>Get ready to fight, survive, and dominate in the BGMI Battle Royale, hosted by BLITZ – The Computer Science Society of Keshav Mahavidyalaya!</p>
+                        <p><strong>Team Size:</strong> Squad (4 players)</p>
+                        <p><strong>Date:</strong> 2nd April 2025</p>
+                        <p><strong>Reporting Time:</strong> 10:30 AM</p>
+                        <p><strong>Venue:</strong> Keshav Mahavidyalaya, University of Delhi</p>
+                        <p><strong>Match Format:</strong></p>
+                        <ul>
+                            <li>Maps: Erangel, Miramar, Sanhok (Two maps will be selected)</li>
+                            <li>Rounds: Two intense matches</li>
+                            <li>Scoring: Kill points + Rank-based team points</li>
+                            <li>Tiebreaker: TDM Arena Match if needed</li>
+                        </ul>
+                        <p><strong>Contact:</strong> <br>Sundaram Yadav - 98197 68005 <br>Kanishka Rai - 70175 84908</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="lightbox-wrapper d-flex" data-id="7">
-            <div class="container py-5">
-                <div class="row lightbox-content">
-                    <div class="col-12 col-md-4 container">
-                        <div class="row d-flex flex-row flex-md-column justify-center align-center h-100">
-                            <div class="col-10 h-50 lightbox-poster">
-                                <img src="/media/posters_24/placeholder.jpg" alt="" class="w-100">
-                            </div>
-                        </div>
-                    </div>
-                    <!--<div class="col-12 col-md-8 mt-5 pt-5 container lightbox-details">
-                        <div class="row fg-white px-5 px-md-2">
-                            <div class="col-12 border-bottom border-3 border-white text-center text-md-start pb-3">
-                                <h3 class="fw-900">Creepy Crypt Hunt</h3>
-                                <h5><span class="fg-cyan"> Timings </span><br> 02:30 P.M. - 04:30 P.M.
-                                </h5>
-                                <h5><span class="fg-cyan"> Team Size </span><br> 3 Members </h5>
-                            </div>
-                        </div>
-                        <div class="row fg-white px-md-1 mt-3">
-                            <div class="col-12 col-md-10 text-center text-md-start">
-                                <p>"I have keys but do not lock. I have space but no room. You can enter but not come in
-                                    what am I?”🤔
-                                    If you think you know the answer then get ready to embark on a thrilling adventure!
-                                </p>
-                                <br>
-                                <p>
-                                    <span class="fg-cyan">Overview</span><br><br>
-                                    The Creepy Crypt Hunt is based on the popular Netflix series “Wednesday”.
-                                    To succeed, participants must channel their inner Wednesday Addams and employ their
-                                    psychic ability
-                                    to decipher the hints provided through QR Codes.🔒
 
-                                    <br>Participants will use their smartphones to scan QR codes placed throughout the
-                                    college
-                                    campus to get the hidden clues and challenges that requires cleverness, intelligence
-                                    and resourcefulness to solve to reach out to the ultimate reward. 🔓
-
-                                    <br>So, fasten your seatbelts for an unforgettable experience and surely an
-                                    adrenaline rush
-                                    that will leave you with memories to last a lifetime.
-
-                                    <br><br>Exciting isn’t it?🔥
-
-                                    <br>So step right in and conquer the Crypt down below⬇️
-
-
-                                    <br>Winners will get thrilling rewards!🏆
-
-
-
-
-                                </p>
-                                <p>
-                                    <span class="fg-cyan">Student Co-ordinators</span><br>
-                                    Simrat - <span class="mona-sans">9013027661</span>
-                                    <br><br>
-                                    Shruti - <span class="mona-sans">9711350124</span>
-                                </p>
-
-                            </div>
-                        </div>
-                        <div class="row fg-white px-5 px-md-1 mt-3">
-                            <div class="col-12 col-md-6 mb-3 text-center text-md-start">
-                                <a href="https://forms.gle/aptxrM45ZhHdW9369" target="_blank"><button
-                                        class="btn-primary">Register</button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>-->
-        <div class="lightbox-wrapper d-flex" data-id="8">
-            <div class="container py-5">
-                <div class="row lightbox-content">
-                    <div class="col-12 col-md-4 container">
-                        <div class="row d-flex flex-row flex-md-column justify-center align-center h-100">
-                            <div class="col-10 h-50 lightbox-poster">
-                                <img src="/media/posters_24/WEB BUGS.png" alt="" class="w-100">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-8 mt-5 pt-5 container lightbox-details">
-                        <div class="row fg-white px-5 px-md-2">
-                            <div class="col-12 border-bottom border-3 border-white text-center text-md-start pb-3">
-                                <h3 class="fw-900">Frame It Right</h3>
-                                <h5><span class="fg-cyan"> Timings </span><br> 11:30 P.M. - 01:30 P.M.
-                                </h5>
-                                <h5><span class="fg-cyan"> Team Size </span><br> 2 Members </h5>
-                            </div>
-                        </div>
-                        <div class="row fg-white px-md-1 mt-3">
-                            <div class="col-12 col-md-10 text-center text-md-start">
-                                <p>
-                                    📌 Open to all courses.
-                                    📌 Cross college team is allowed. <br><br>
-                                    <span class="fg-cyan">Overview</span><br>
-                                    Participants in the competition navigate through two distinct phases:<br>
-                                    
-                                    In the Initial Round, they are tasked with debugging and optimizing HTML and JavaScript code for a form.
-                                    Their objective is to ensure the successful transmission of requests to a designated web server,
-                                    which in turn elicits a unique link response.
-                                    Subsequently, in the Main Round, participants are challenged with website source code.
-                                    They are prompted to refine and align it with the specified requirements demonstrated in a provided sample.
-
-                                    <br><br>🌐 Internet Usage is allowed for research on various technologies. 
-                                    <br>🤐 Unfair Practices such as sharing your code with anyone outside of the tournament will lead to disqualification.💬
-                                    <br>👥 Participants are required to bring their own devices.
-                                    
-                                    <br><br>🏆 Winners will get thrilling rewards! 🏆
-                                </p><br>
-                                <p>
-                                    <span class="fg-cyan">Student Co-ordinators</span><br>
-                                    Priyanshi Jain - <span class="mona-sans">9625317445</span>
-                                    <br>
-                                    Nancy Gupta - <span class="mona-sans">9260938565</span>
-                                </p>
-
-                            </div>
-                        </div>
-                        <div class="row fg-white px-5 px-md-1 mt-3">
-                            <div class="col-12 col-md-6 mb-3 text-center text-md-start">
-                                <a href="https://forms.gle/vKdBTX1NZLgcUckU6" target="_blank"><button
-                                        class="btn-primary">Register</button></a>
-                            </div>
-                        </div>
+        <div id="beyondAbstractModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('beyondAbstractModal')">&times;</span>
+                <div class="modal-body">
+                    <img src="/media/posters_25/beyond_the_abstract.png" alt="Beyond the Abstract Poster" class="modal-poster">
+                    <div class="modal-details">
+                        <h2>Beyond the Abstract – Research Paper Competition</h2>
+                        <p>Are you ready to challenge your research skills? BLITZKRIEG’25 presents Beyond the Abstract, a two-round hybrid competition where you analyze, present, and defend research findings.</p>
+                        <p><strong>Competition Format:</strong></p>
+                        <ul>
+                            <li>Round 1 (Online): Abstract Hunt & Submission (Deadline: 30th March 2025, 5:00 PM)</li>
+                            <li>Round 2 (Offline): Research Defense & Real-World Application (2nd April 2025)</li>
+                        </ul>
+                        <p><strong>Participation:</strong> Individual</p>
+                        <p><strong>Contact:</strong> <br>Nancy - 92609 38565 <br>Isha - 93546 45681</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="close-btn clickable">
-            <h3 class="fg-white">X</h3>
-        </div>
-    </div>
-    <div class="root container-fluid">
-        <div class="header-wrapper container-fluid">
-            <nav class="navbar navbar-expand-md container-lg justify-between">
-                <a class="navbar-brand" href="/"><span class="mona-sans fg-grad-primary clickable"
-                        style="font-weight: 900;">BLITZ</span></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav align-center mr-auto mona-sans fg-white txt-24">
-                        <li class="nav-item">
-                            <a class="nav-link clickable" href="/">HOME</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link clickable" href="/events.html">eVENTS</a>
-                        </li>
-                        <!--<li class="nav-item">
-                            <a class="nav-link clickable" href="/sponsors.html">SPONSORS</a>
-                        </li>
-                        <li class="nav-item active">
-                            <a class="nav-link clickable" href="">UPCOMING EVENTS</a>
-                        </li>-->
-                        <li class="nav-item">
-                            <a class="nav-link clickable" href="/team.html">OUR TEAM</a>
-                        </li>
-                        
-                        
-                        
-                        <!-- <li class="nav-item">
-                        <a class="nav-link clickable" href="/location.html">HOW TO REACH</a>
-                      </li> -->
-                    </ul>
-                </div>
-            </nav>
-        </div>
-        <!-- Header End -->
-        <section class="sponsors-container">
-            <div class="container">
-                <div class="row justify-center">
-                    <div class="col-12 col-md-6">
-                        <h2 class="text-center fg-white fw-900">EVENTS</h2>
-                        <p class="fg-white text-center">
-                            Compete in thrilling technical and non-technical events,<br>
-                            Get a chance to win prizes worth thousand,<br>
-                            Seize the opportunity to showcase your skills and emerge victorious!
-                        </p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="row justify-center align-center" style="gap: 25px;">
-                            <div class="col-4 card-wrapper">
-                                <article class="card clickable" id="event1Card">
-                                    <div class="card__link">
+        <footer class="footer">
+            <p>&copy; 2025 Blitzkrieg | All Rights Reserved</p>
+        </footer>
 
-                                        <!-- Icon -->
-                                        <div class="card__icon">
+        <script>
+            function openModal(modalId) {
+                const modal = document.getElementById(modalId);
+                modal.style.display = 'block';
+                modal.classList.add('fade-in');
+            }
 
-                                            <h6 class="fg-white">11:30 A.M.</h6>
-                                        </div>
-
-                                        <!-- Media -->
-                                        <div class="card__media">
-
-                                        </div>
-
-                                        <!-- Header -->
-                                        <div class="card__header d-flex justify-between" data-toggle="1">
-                                            <div class="v-flex">
-                                                <h5 class="card__header-title">The Final Argument</h5>
-                                                <p class="card__header-meta">Debate Competetion</p>
-                                            </div>
-                                            <div class="card__header-icon">
-                                                <svg viewbox="0 0 28 25">
-                                                    <path fill="#fff"
-                                                        d="M13.145 2.13l1.94-1.867 12.178 12-12.178 12-1.94-1.867 8.931-8.8H.737V10.93h21.339z" />
-                                                </svg>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </article>
-                            </div>
-
-
-
-                            
-                            <div class="col-4 card-wrapper">
-                                <article class="card clickable" id="event4Card">
-                                    <div class="card__link">
-
-                                        <!-- Icon -->
-                                        <div class="card__icon">
-
-                                            <h6 class="fg-white">11:30 A.M.</h6>
-                                        </div>
-
-                                        <!-- Media -->
-                                        <div class="card__media">
-
-                                        </div>
-
-                                        <!-- Header -->
-                                        <div class="card__header d-flex justify-between" data-toggle="4">
-                                            <div class="v-flex">
-                                                <h5 class="card__header-title">Code Of Duty</h5>
-                                                <p class="card__header-meta">Competitive Coding Competition</p>
-                                            </div>
-                                            <div class="card__header-icon">
-                                                <svg viewbox="0 0 28 25">
-                                                    <path fill="#fff"
-                                                        d="M13.145 2.13l1.94-1.867 12.178 12-12.178 12-1.94-1.867 8.931-8.8H.737V10.93h21.339z" />
-                                                </svg>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="col-4 card-wrapper">
-                                <article class="card clickable" id="event2Card">
-                                    <div class="card__link">
-
-                                        <!-- Icon -->
-                                        <div class="card__icon">
-
-                                            <h6 class="fg-white">01:30 P.M.</h6>
-                                        </div>
-
-                                        <!-- Media -->
-                                        <div class="card__media">
-
-                                        </div>
-
-                                        <!-- Header -->
-                                        <div class="card__header d-flex justify-between" data-toggle="2">
-                                            <div class="v-flex">
-                                                <h5 class="card__header-title">Beyond The Abstract</h5>
-                                                <p class="card__header-meta">Research Paper Presentation</p>
-                                            </div>
-                                            <div class="card__header-icon">
-                                                <svg viewbox="0 0 28 25">
-                                                    <path fill="#fff"
-                                                        d="M13.145 2.13l1.94-1.867 12.178 12-12.178 12-1.94-1.867 8.931-8.8H.737V10.93h21.339z" />
-                                                </svg>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="col-4 card-wrapper">
-                                <article class="card clickable" id="event2Card">
-                                    <div class="card__link">
-
-                                        <!-- Icon -->
-                                        <div class="card__icon">
-
-                                            <h6 class="fg-white">01:30 P.M.</h6>
-                                        </div>
-
-                                        <!-- Media -->
-                                        <div class="card__media">
-
-                                        </div>
-
-                                        <!-- Header -->
-                                        <div class="card__header d-flex justify-between" data-toggle="2">
-                                            <div class="v-flex">
-                                                <h5 class="card__header-title">Geek League</h5>
-                                                <p class="card__header-meta">Tech Quiz Competition</p>
-                                            </div>
-                                            <div class="card__header-icon">
-                                                <svg viewbox="0 0 28 25">
-                                                    <path fill="#fff"
-                                                        d="M13.145 2.13l1.94-1.867 12.178 12-12.178 12-1.94-1.867 8.931-8.8H.737V10.93h21.339z" />
-                                                </svg>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="col-4 card-wrapper">
-                                <article class="card clickable" id="event8Card">
-                                    <div class="card__link">
-
-                                        <!-- Icon -->
-                                        <div class="card__icon">
-
-                                            <h6 class="fg-white">11:30 P.M.</h6>
-                                        </div>
-
-                                        <!-- Media -->
-                                        <div class="card__media">
-
-                                        </div>
-
-                                        <!-- Header -->
-                                        <div class="card__header d-flex justify-between" data-toggle="8">
-                                            <div class="v-flex">
-                                                <h5 class="card__header-title">Frame It Right</h5>
-                                                <p class="card__header-meta">Web-Prototype Event</p>
-                                            </div>
-                                            <div class="card__header-icon">
-                                                <svg viewbox="0 0 28 25">
-                                                    <path fill="#fff"
-                                                        d="M13.145 2.13l1.94-1.867 12.178 12-12.178 12-1.94-1.867 8.931-8.8H.737V10.93h21.339z" />
-                                                </svg>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="col-4 card-wrapper">
-                                <article class="card clickable" id="event3Card">
-                                    <div class="card__link">
-
-                                        <!-- Icon -->
-                                        <div class="card__icon">
-
-                                            <h6 class="fg-white">03:30 P.M.</h6>
-                                        </div>
-
-                                        <!-- Media -->
-                                        <div class="card__media">
-
-                                        </div>
-
-                                        <!-- Header -->
-                                        <div class="card__header d-flex justify-between" data-toggle="3">
-                                            <div class="v-flex">
-                                                <h5 class="card__header-title">Red Light, Green Hunt!</h5>
-                                                <p class="card__header-meta">Squid Game Themed Treasure Hunt</p>
-                                            </div>
-                                            <div class="card__header-icon">
-                                                <svg viewbox="0 0 28 25">
-                                                    <path fill="#fff"
-                                                        d="M13.145 2.13l1.94-1.867 12.178 12-12.178 12-1.94-1.867 8.931-8.8H.737V10.93h21.339z" />
-                                                </svg>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </article>
-                            </div>
-                            <div class="col-4 card-wrapper">
-                                <article class="card clickable" id="event5Card">
-                                    <div class="card__link">
-
-                                        <!-- Icon -->
-                                        <div class="card__icon">
-
-                                            <h6 class="fg-white">1:30 A.M.</h6>
-                                        </div>
-
-                                        <!-- Media -->
-                                        <div class="card__media">
-
-                                        </div>
-
-                                        <!-- Header -->
-                                        <div class="card__header d-flex justify-between" data-toggle="5">
-                                            <div class="v-flex">
-                                                <h5 class="card__header-title">BGMI Battle Royale</h5>
-                                                <p class="card__header-meta">Gaming Tournament</p>
-                                            </div>
-                                            <div class="card__header-icon">
-                                                <svg viewbox="0 0 28 25">
-                                                    <path fill="#fff"
-                                                        d="M13.145 2.13l1.94-1.867 12.178 12-12.178 12-1.94-1.867 8.931-8.8H.737V10.93h21.339z" />
-                                                </svg>
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </article>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="v-flex socials-container gap-15 justify-center align-center">
-            <div class="insta-container">
-                <a href="http://instagram.com/blitzkmv/" target="_blank"><img class="clickable"
-                        src="/media/icon _instagram.png" alt=""></a>
-            </div>
-            <div class="linkedin-container"><a
-                    href="https://www.linkedin.com/company/the-computer-science-society-keshav-mahavidyalaya/"
-                    target="_blank"><img class="clickable" src="/media/icon _linkedIn.png" alt=""></a></div>
-            <div class="email-container"><a href="mailto:team.blitzkmv@gmail.com"><img class="clickable"
-                        src="/media/icon _email_.png" alt=""></a></div>
-        </div>
-        <div class="container-fluid footer-wrapper">
-            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
-                <div class="col-md-4 d-flex align-items-center">
-                    <span class="text-muted">Designed By <a href="https://www.instagram.com/codingncraft/" target="_blank">Team BLITZ</a></span>
-                </div>
-            </footer>
-        </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>
-</body>
-
+            function closeModal(modalId) {
+                const modal = document.getElementById(modalId);
+                modal.classList.remove('fade-in');
+                modal.style.display = 'none';
+            }
+        </script>
+    </body>
 </html>
