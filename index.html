@@ -1,260 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="consolenine">
-    <meta name="description" content="Blitzkrieg is the annual tech fest of Keshav Mahavidyalaya, University of Delhi.">
-    <meta name="keywords" content="university of delhi, fest, tech, computer, science, delhi, student" >
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/anim.css">
-    <link rel="stylesheet" href="./css/style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="/js/main.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="consolenine">
+        <meta name="description" content="Blitzkrieg is the annual tech fest of Keshav Mahavidyalaya, University of Delhi.">
+        <meta name="keywords" content="university of delhi, fest, tech, computer, science, delhi, student" >
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/home.css">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
 
-    <title>BLITZ - The Computer Science Society of Keshav Mahavidyalaya</title>
-</head>
-<body class="overflow-hidden">
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-128ZQQNK9P"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-128ZQQNK9P');
-    </script>
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-        <symbol id="bootstrap" viewBox="0 0 118 94">
-            <title>Bootstrap</title>
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"></path>
-        </symbol>
-        <symbol id="facebook" viewBox="0 0 16 16">
-            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"></path>
-        </symbol>
-        <symbol id="instagram" viewBox="0 0 16 16">
-            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"></path>
-        </symbol>
-        <symbol id="twitter" viewBox="0 0 16 16">
-            <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"></path>
-        </symbol>
-    </svg>
-    
-    <!-- Custom Cursor Container 
-    <div id="custom-cursor"></div> -->
-    
-    <!-- Main Body Wrapper -->
-    <section class="root">
-        <!-- Main Header -->
-        <div class="header-wrapper container-fluid d-none">
-            <!-- <embed name="BGM" src="/media/bgm.mp3" width="24px" height="24px"  loop autostart style="position: absolute; right: 10px; top: 10px;"> -->
-            <nav class="navbar navbar-expand-md container-lg justify-between">
-                <a class="navbar-brand" href="/"><span class="mona-sans fg-grad-primary clickable" style="font-weight: 900;">BLITZ</span></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav align-center mr-auto mona-sans fg-white txt-24">
-                      <li class="nav-item active">
-                        <a class="nav-link clickable" href="#">HOME</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link clickable" href="/events.html">HISTORY</a>
-                      </li>
-                        <li class="nav-item">
-                        <a class="nav-link clickable" href="/sponsors.html">SPONSORS</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link clickable" href="">UPCOMING EVENTS</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link clickable" href="/team.html">OUR TEAM</a>
-                      </li>
-                     
-                      
-                      
-                      <!-- <li class="nav-item">
-                        <a class="nav-link clickable" href="/location.html">HOW TO REACH</a>
-                      </li> -->
-                    </ul>
+        <title>BLITZ - The Computer Science Society of Keshav Mahavidyalaya</title>
+    </head>
+    <body>
+        <nav class="blurry-navbar">
+            <div class="navbar-container">
+                <div class="navbar-logo">BLITZ</div>
+                <div class="navbar-links">
+                    <a href="/" class="nav-link">HOME</a>
+                    <a href="/sponsors.html" class="nav-link">SPONSORS</a>
+                    <a href="/events.html" class="nav-link">EVENTS</a>
+                    <a href="/team.html" class="nav-link">OUR TEAM</a>
                 </div>
-            </nav>
+            </div>
+        </nav>
+        <div class="center-content">
+            <img src="./media/SG_logo.png" alt="SG Logo" class="center-logo">
+            <h1 class="main-title">BLITZKRIEG</h1>
+            <p class="sub-title">2025</p>
+            <p class="date-title">02.03.2025</p>
+            <p class="onwards-title">onwards</p>
+            <p class="tagline-title">Tech. Fun. Fest</p>
+            <a href="/events.html" class="register-button">View All Events</a>
         </div>
-        <!-- Header End -->
-        <div class="v-flex socials-container gap-15 justify-center align-center d-none">
-            <div class="insta-container">
-                <a href="http://instagram.com/blitzkmv/" target="_blank"><img class="clickable" src="/media/icon _instagram.png" alt=""></a>
+        <section class="lore-section">
+            <img src="./media/gaurd_1.png" alt="Guard 1" class="lore-image left-image">
+            <div class="lore-text">
+                <h2 class="lore-title">Welcome to<br>Blitzkrieg ‘25</h2>
+                <p>BLITZKRIEG at Keshav Mahavidyalaya is dedicated to cultivating the advancement of the technology industry and inspiring the creation of novel and innovative solutions for global challenges.
+                    These events serve as a platform for individuals and organizations to converge, exchanging expertise and knowledge with the collective aim of shaping a brighter future through transformative technology.<br>We organised a number of events for BLITZKRIEG'24, including our coding competition "Code Duel 2.0", our web development competition "Web Bugs", our debating competition "Job Wars", our gaming competition "BGMI Showdown", our treasure hunt competition "Finding Meme-O" and many more. These activities would not be possible without the tireless efforts of committed volunteers and the organisational staff. </p>
+                <a href="/team.html" class="register-button">Meet Our Team</a>
             </div>
-            <div class="linkedin-container"><a href="https://www.linkedin.com/company/the-computer-science-society-keshav-mahavidyalaya/" target="_blank"><img class="clickable" src="/media/icon _linkedIn.png" alt=""></a></div>
-            <div class="email-container"><a href="mailto:team.blitzkmv@gmail.com"><img class="clickable" src="/media/icon _email_.png" alt=""></a></div>
-        </div>
-        <section class="hero-wrapper container-fluid d-flex justify-content-center align-center">
-            <div class="hero-bg"></div>
-            <!-- <div class="hero-bg glitch before"></div>
-            <div class="hero-bg glitch after"></div> -->
-            <div class="hero row align-content-end justify-center d-none">
-                <!-- <div class="col-12 hero-support" style="height: 100px;position: relative;top:35px;"></div> -->
-                <!--<div class="plx-img"><img src="/media/right_new_1.png"></div>
-                <div class="plx-img-2 d-none d-md-block"><img src="/media/left_new_1.png"></div>-->
-                <div class="col-12 mt-5 fg-white">
-                    <h1 class="TextForMobile" style="text-align:center;"></h1>
-                    <div class="text-anim-wrapper d-flex g-2 justify-center align-center" data-text="BLITZKRIEG">
-                        <!--<h1 class="text-anim text-anim-down" id="id1"><img src="media/b.png"></h1>
-                        <h1 class="text-anim text-anim-up" id="id2"><img src="media/L.png"></h1>
-                        <h1 class="text-anim text-anim-down" id="id3"><img src="media/I.png"></h1>
-                        <h1 class="text-anim text-anim-up" id="id4"><img src="media/T.png"></h1>
-                        <h1 class="text-anim text-anim-down" id="id5"><img src="media/Z.png"></h1>
-                        <h1 class="text-anim text-anim-up" id="id6"><img src="media/K.png"></h1>
-                        <h1 class="text-anim text-anim-down" id="id7"><img src="media/R.png"></h1>
-                        <h1 class="text-anim text-anim-up" id="id8"><img src="media/I.png"></h1>
-                        <h1 class="text-anim text-anim-down" id="id9"><img src="media/E.png"></h1>
-                        <h1 class="text-anim text-anim-up" id="id10"><img src="media/G.png"></h1>-->
-                        <h4 class="text-center fw-900 fg-white">BLITZ</h4>
-                    </div>
-                    <h1 class="text-center hollow-txt1 fg-white fade">2024</h1>
-                </div>
-                <div class="col-12 fg-white text-center fade">
-                    <h3 class="mona-sans fw-900">
-                        <!--<span class="hollow-txt1">TECH.</span>
-                        <span>FUN.</span>
-                        <span class="hollow-txt1">FEST.</span>-->
-                    </h3>
-                    <br>
-                </div>
-                <div class="col-6 col-lg-12 d-lg-flex justify-center fg-white text-center fade fadeIn blur-background">
-                    <!--<div class="w-lg-25 border-white border-top border-bottom mona-sans fw-700 p-1" style="color: #fff; font-size: 20px;">13th September, 2024<br>2:30 PM Onwards</div>-->
-                </div>
-                <div class="col-12 col-lg-2 mb-3 mb-lg-5 d-flex justify-center fade fadeIn">
-                    <a href="/events.html">
-                        <!--<button class="btn-primary clickable" href="#">
-                            REGISTER
-                        </button>-->
-                    </a>
-                </div>
-            </div>
+            <img src="./media/gaurd_2.png" alt="Guard 2" class="lore-image right-image">
         </section>
-        <section class="about-us container-fluid v-flex justify-content-end g-3 pb-5 justify-content-lg-end align-center">
-            <div class="row container-lg h-75 justify-center" style="max-height: 420px;">
-                <div class="row row-cols-lg-1 justify-center">
-                    <div class="col-12 text-center">
-                        <h2 class="fw-900 fg-white"> <!--WELCOME TO <br> --> BLIT<span class="hollow-txt1 fg-grad-primary" style="font-size: calc(2rem + .9vw);">ZKRI</span>EG '24</h2>
-                    </div>
-                    <p class="col-12 fg-white text-center" style="max-width: 500px;">
-                        BLITZKRIEG at Keshav Mahavidyalaya is dedicated to cultivating
-                        the advancement of the technology industry and inspiring the creation
-                        of novel and innovative solutions for global challenges.
-                        <br>
-                        These events serve as a platform for individuals and organizations
-                        to converge, exchanging expertise and knowledge with the collective
-                        aim of shaping a brighter future through transformative technology.
-                        <br>
-                        We organised a number of events for BLITZKRIEG'24, including our coding competition "Code Duel 2.0", our web development competition "Web Bugs", 
-                        our debating competition "Job Wars", our gaming competition "BGMI Showdown", our treasure hunt competition "Finding Meme-O" and many more. 
-                        These activities would not be possible without the tireless efforts of committed volunteers and the organisational staff.
-                    </p>
-                    </p>
-                    <div class="col-12 col-lg-2 mb-5 d-flex justify-center">
-                        <a href="/team.html">
-                            <button class="btn-primary clickable">
-                                MEET OUR TEAM
-                            </button>
-                        </a>
-                    </div>
-                </div>
+        <section class="unleashed-section">
+            <div class="unleashed-text">
+                <h2 class="unleashed-title">
+                    BRILLIANT INFORMATION<br>
+                    TECHNOLOGY ZEALOTS:<br>
+                    <strong>BLITZ</strong>
+                    </h2>
+                <p>In order to promote contact between students and faculty members and to raise awareness of the newest technology developments, we host competitions, seminars, and workshops. BLITZ held a number of events during the most recent session, such as seminars on "Career Trends in Computer Science", "First Steps Towards Open Source with Git/GitHub", and "Secure Coding Practices". To further assist students in becoming experts in their chosen fields, we also held a number of coding competitions. <br><br>
+                In addition to these informative seminars, our yearly technical festival, BLITZKRIEG, highlights the vibrant energy and steadfast passion of our student body. Students from various backgrounds and interests come together to celebrate technology and innovation. The festival provides a broad array of programs that encourage innovation and test the sharpest minds, including both tech and non-tech ones.
+                </p>
             </div>
-            <div class="row container-fluid h-25 justify-content-center my-5" style="max-height: 100px;">
-                <!-- <div class="col-12"><h6 class="fg-white">Sponsored By</h6></div>
-                <div class="row col-12 row-cols-3 row-cols-lg-12 justify-center sponsors-container">
-                    <img src="/media/google_logo.png" alt="" class="col-3 col-sm-2 col-md-1">
-                    <img src="/media/meta_logo_.png" alt="" class="col-3 col-sm-2 col-md-1">
-                    <img src="/media/google_logo.png" alt="" class="col-3 col-sm-2 col-md-1">
-                    <img src="/media/meta_logo_.png" alt="" class="col-3 col-sm-2 col-md-1">
-                    <img src="/media/google_logo.png" alt="" class="col-3 col-sm-2 col-md-1">
-                    <img src="/media/meta_logo_.png" alt="" class="col-3 col-sm-2 col-md-1">
-                    <img src="/media/google_logo.png" alt="" class="col-3 col-sm-2 col-md-1">
-                    <img src="/media/meta_logo_.png" alt="" class="col-3 col-sm-2 col-md-1">
-                    <img src="/media/google_logo.png" alt="" class="col-3 col-sm-2 col-md-1">
-                    <img src="/media/meta_logo_.png" alt="" class="col-3 col-sm-2 col-md-1">
-                    <img src="/media/google_logo.png" alt="" class="col-3 col-sm-2 col-md-1">
-                    <img src="/media/meta_logo_.png" alt="" class="col-3 col-sm-2 col-md-1">
-                </div> -->
-            </div>
+            <img src="./media/doll.png" alt="Doll" class="unleashed-image">
         </section>
-        <section class="events-wrapper container-fluid">
-            <div class="container h-100">
-                <div class="row h-100">
-                    <div class="col-12 col-lg-8 v-flex gy-5 justify-center container-fluid">
-                        <div class="row">
-                            <div class="col-12 fg-white"><h3 class="fw-900">BRILLIANT <span class="fg-grad-primary">INFORMATION</span></h3></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 fg-white"><h3 class="fw-900">TECHNOLOGY <span class="fg-grad-primary">ZEALOTS:</h3></span></h3></diV>
-                        <div class="row">
-                            <div class="col-12 fg-white"><h3 class="fw-900"> <span class="fg-grad-primary">BLITZ</span></h3></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 col-md-6 fg-white"><p>
-                                <!--Hello Tech Enthusiasts!🚀
-                                <br><br>
-                                Gear up for a coding adventure at our tech fest!
-                                It's set to be a byte-sized explosion of fun and laughter.
-                                <br><br>
-                                Calling all programmers, gamers, and tech lovers—there's something special for everyone.
-                                Grab your nerdy glasses, power up those laptops, and let's geek out together!
-                                Catch you at the fest, where the only acceptable bug is the one in your code!-->
-                                In order to promote contact between students and faculty members and to raise awareness of the newest technology developments, we host competitions, seminars, and workshops. 
-                                BLITZ held a number of events during the most recent session, such as seminars on "Career Trends in Computer Science",
-                                "First Steps Towards Open Source with Git/GitHub", and "Secure Coding Practices". 
-                                To further assist students in becoming experts in their chosen fields, we also held a number of coding competitions.
-                                <br><br>
-                                In addition to these informative seminars, our yearly technical festival, BLITZKRIEG, highlights the vibrant energy 
-                                and steadfast passion of our student body. Students from various backgrounds and interests come together to celebrate technology and innovation. 
-                                The festival provides a broad array of programs that encourage innovation and test the sharpest minds, including both tech and non-tech ones.                                
-                                <br><br>
-                            
-                            </p></div>
-                        </div>
-                        <div class="row">
-                            <div class="col-4">
-                                <a href="/events.html">
-                                    <button class="btn-primary clickable" href="#">
-                                        VIEW ALL EVENTS
-                                    </button>
-                                </a>
-                                
-                            </div>
-                        </div>
-                    </div>
-                   
-                    <div class="col-12 col-lg-4 v-flex gy-5 justify-center container-fluid poster-main">
-                         <!--
-                            
-                        <div class="row">
-                            <img src="/media/poster2023v2_landscape_optimized.jpg" alt="POSTER MAIN" width="500px">
-                        </div>
-                        -->
-                    </div>
-                    
-                </div>
+        <footer class="footer">
+            <p>&copy; 2025 Blitzkrieg | All Rights Reserved</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/company/the-computer-science-society-keshav-mahavidyalaya/" target="_blank">
+                    <img src="./media/linkedin-icon.png" alt="LinkedIn" width="24" height="24">
+                </a>
+                <a href="https://www.instagram.com/blitzkmv/" target="_blank">
+                    <img src="./media/instagram-icon.png" alt="Instagram" width="24" height="24">
+                </a>
             </div>
-        </section>
-        <div class="container-fluid footer-wrapper">
-            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
-                <div class="col-md-4 d-flex align-items-center">
-                <span class="text-muted">Designed By <a href="https://www.instagram.com/codingncraft/" target="_blank">Team BLITZ</a></span>
-                </div>
-            
-                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex fg-white">
-                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi fg-white" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
-                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-                <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
-                </ul>
-            </footer>
-        </div>
-    </section>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-</body>
+        </footer>
+    </body>
 </html>

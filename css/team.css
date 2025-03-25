@@ -1,0 +1,328 @@
+body.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+.team-carousel {
+    background-color: #1e1e1e;
+    padding: 20px 0;
+    margin-top: 2rem;
+}
+
+.carousel-container {
+    display: flex;
+    gap: 20px;
+}
+
+.carousel-card {
+    width: 180px; /* Set a fixed width for the carousel items */
+    text-align: center;
+    background: #2a2a2a;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    margin: 0 auto; /* Center the card horizontally */
+}
+
+.carousel-card img {
+    width: 100%; /* Adjust to fit within the reduced card width */
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.carousel-card h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.carousel-card p {
+    font-size: 0.9rem;
+    color: #b0b0b0;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.owl-nav {
+    /* center */
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.owl-nav button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.owl-nav button:hover {
+    background-color: #555;
+}
+
+.footer {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+.team-details {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    padding: 30px;
+    margin-top: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6);
+}
+
+.team-details h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #444;
+    padding-bottom: 10px;
+}
+
+.team-group {
+    margin-bottom: 1.5rem;
+}
+
+.team-group h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+}
+
+.team-group ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.team-group ul li {
+    font-size: 1rem;
+    margin: 0.3rem 0;
+    color: #b0b0b0;
+}
+
+.team-table {
+    width: 90%; /* Reduce the width to shrink the table */
+    margin: 0 auto; /* Center the table horizontally */
+    border-collapse: separate;
+    border-spacing: 0 10px; /* Add spacing between rows */
+    margin-top: 1.5rem;
+}
+
+.team-table th,
+.team-table td {
+    border: none; /* Remove borders for a cleaner look */
+    padding: 15px;
+    text-align: left;
+    vertical-align: top;
+    background-color: #2a2a2a;
+    border-radius: 0; /* Remove rounded corners */
+}
+
+.team-table th:first-child,
+.team-table td:first-child {
+    text-align: center; /* Center-align text in the first column */
+    border-top-left-radius: 10px; /* Round only the outer top-left corner */
+    border-bottom-left-radius: 10px; /* Round only the outer bottom-left corner */
+}
+
+.team-table th:last-child,
+.team-table td:last-child {
+    border-top-right-radius: 10px; /* Round only the outer top-right corner */
+    border-bottom-right-radius: 10px; /* Round only the outer bottom-right corner */
+}
+
+.team-table th {
+    color: #ffffff;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.team-table td {
+    color: #b0b0b0;
+    font-size: 1rem;
+}
+
+.team-table ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.team-table ul li {
+    margin: 0.3rem 0;
+    color: #d0d0d0;
+}
+
+.team-table ul li {
+    position: relative;
+    padding-bottom: 10px; /* Add space for the horizontal rule */
+}
+
+.team-table ul li:not(:last-child)::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #444; /* Color of the horizontal rule */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.team-table tr:hover td {
+    background-color: #333; /* Highlight row on hover */
+    transition: background-color 0.3s ease;
+}
+
+.team-table th:nth-child(odd),
+.team-table td:nth-child(odd) {
+    background-color: #252525; /* Slightly darker background for odd columns */
+}
+
+.team-table th:nth-child(even),
+.team-table td:nth-child(even) {
+    background-color: #2a2a2a; /* Slightly lighter background for even columns */
+}
+
+@media (max-width: 600px) {
+    .team-table {
+        width: 100%; /* Make the table full width on small screens */
+    }
+}
+
+.event-details {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    padding: 30px;
+    margin-top: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6);
+    margin-bottom: 2rem; /* Add margin below the last section */
+}
+
+.event-details h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #444;
+    padding-bottom: 10px;
+}
+
+.event-table {
+    width: 90%; /* Same as team table */
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    margin-top: 1.5rem;
+}
+
+.event-table th,
+.event-table td {
+    border: none;
+    padding: 15px;
+    text-align: left;
+    vertical-align: top;
+    background-color: #2a2a2a;
+    border-radius: 0;
+}
+
+.event-table th:first-child,
+.event-table td:first-child {
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.event-table th:last-child,
+.event-table td:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.event-table th {
+    color: #ffffff;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.event-table td {
+    color: #b0b0b0;
+    font-size: 1rem;
+}
+
+.event-table ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.event-table ul li {
+    margin: 0.3rem 0;
+    color: #d0d0d0;
+}
+
+.event-table ul li {
+    position: relative;
+    padding-bottom: 10px; /* Add space for the horizontal rule */
+}
+
+.event-table ul li:not(:last-child)::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #444; /* Color of the horizontal rule */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.event-table tr:hover td {
+    background-color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.event-table th:nth-child(odd),
+.event-table td:nth-child(odd) {
+    background-color: #252525;
+}
+
+.event-table th:nth-child(even),
+.event-table td:nth-child(even) {
+    background-color: #2a2a2a;
+}
+
+@media (max-width: 600px) {
+    .event-table {
+        width: 100%; /* Full width on small screens */
+    }
+}
