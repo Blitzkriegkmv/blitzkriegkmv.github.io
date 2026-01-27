@@ -1,0 +1,168 @@
+.homePage {
+  min-height: 100vh;
+}
+
+.centerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.centerLogo {
+  max-width: 20rem;
+  margin-bottom: 1rem;
+}
+
+.mainTitle {
+  font-size: 4rem;
+  margin: 0;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.subTitle {
+  font-size: 1.5rem;
+  margin: 5px 0 0;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.dateTitle {
+  font-size: 1.8rem;
+  margin: 0;
+  margin-top: 3rem;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.onwardsTitle {
+  font-size: 1rem;
+  margin: 0;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.taglineTitle {
+  font-size: 2rem;
+  margin: 3rem 0 0;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Lore Section */
+.loreSection {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 3rem 0;
+  text-align: center;
+  background-color: rgba(48, 48, 48, 0.9);
+  position: relative;
+}
+
+.loreImage {
+  max-width: 20%;
+  flex-shrink: 0;
+  height: auto;
+  align-self: flex-end;
+}
+
+.leftImage {
+  margin-right: 0;
+}
+
+.rightImage {
+  margin-left: 0;
+}
+
+.loreText {
+  max-width: 60%;
+  padding: 0 2rem;
+  color: white;
+}
+
+.loreTitle {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.loreText p {
+  font-size: 1rem;
+  line-height: 1.5;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  font-family: 'Noto Sans', sans-serif;
+}
+
+/* Unleashed Section */
+.unleashedSection {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 3rem 10%;
+  background-color: rgba(32, 32, 32, 1);
+  color: white;
+  text-align: left;
+}
+
+.unleashedText {
+  max-width: 60%;
+}
+
+.unleashedTitle {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+.unleashedText p {
+  font-size: 0.8rem;
+  line-height: 1.8;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.unleashedImage {
+  max-width: 50%;
+  height: auto;
+  flex-shrink: 0;
+  align-self: flex-end;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .mainTitle {
+    font-size: 3rem;
+  }
+
+  .loreSection {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .loreImage {
+    display: none;
+  }
+
+  .loreText {
+    max-width: 100%;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .unleashedSection {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .unleashedText {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .unleashedImage {
+    max-width: 80%;
+    height: auto;
+    align-self: center;
+  }
+}
