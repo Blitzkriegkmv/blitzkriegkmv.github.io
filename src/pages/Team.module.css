@@ -1,293 +1,431 @@
+/* ============================================
+   TEAM PAGE - Stranger Things Theme
+   The Hawkins Crew • The Party
+   ============================================ */
+
 .teamPage {
-  background-color: #121212;
-  color: #e0e0e0;
   min-height: 100vh;
-  padding-bottom: 2rem;
+  padding: 100px 2rem 4rem;
+  background: 
+    radial-gradient(ellipse at 20% 30%, rgba(45, 27, 78, 0.2) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 70%, rgba(139, 0, 0, 0.15) 0%, transparent 40%);
 }
 
-/* Team Carousel */
-.teamCarousel {
-  background-color: #1e1e1e;
-  color: #e0e0e0;
-  padding: 30px;
-  margin-top: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6);
-  margin: 2rem;
-}
-
-.teamCarousel h2 {
+/* ============================================
+   HEADER
+   ============================================ */
+.pageHeader {
   text-align: center;
+  margin-bottom: 4rem;
+  padding-top: 2rem;
+}
+
+.chapterTag {
+  display: inline-block;
+  font-family: 'Special Elite', monospace;
+  font-size: 0.8rem;
+  letter-spacing: 4px;
+  color: rgba(229, 9, 20, 0.8);
+  margin-bottom: 1rem;
+  padding: 0.4rem 1rem;
+  border: 1px solid rgba(229, 9, 20, 0.3);
+  background: rgba(229, 9, 20, 0.05);
+}
+
+.pageTitle {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  color: #e8e6e3;
+  margin: 0 0 1rem;
+  text-shadow: 0 0 30px rgba(229, 9, 20, 0.3);
+}
+
+.pageSubtitle {
+  font-family: 'Special Elite', monospace;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(232, 230, 227, 0.7);
+  margin: 0;
+}
+
+.subtitleAccent {
+  color: #e50914;
+  text-shadow: 0 0 10px rgba(229, 9, 20, 0.5);
+}
+
+.headerDecor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.decorLine {
+  width: 100px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(229, 9, 20, 0.5), transparent);
+}
+
+.decorIcon {
+  color: #e50914;
+  font-size: 0.8rem;
+  text-shadow: 0 0 10px rgba(229, 9, 20, 0.5);
+}
+
+/* ============================================
+   SECTION TITLES
+   ============================================ */
+.sectionTitle {
+  font-family: 'Libre Baskerville', serif;
   font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  border-bottom: 2px solid #444;
-  padding-bottom: 10px;
+  font-weight: 700;
+  color: #e8e6e3;
+  text-align: center;
+  margin-bottom: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.titleIcon {
+  font-size: 1.5rem;
+  filter: drop-shadow(0 0 5px rgba(229, 9, 20, 0.5));
+}
+
+/* ============================================
+   TEAM CAROUSEL
+   ============================================ */
+.teamCarousel {
+  padding: 3rem 0;
+  margin-bottom: 3rem;
 }
 
 .swiperContainer {
-  padding: 20px 0;
+  padding: 2rem 3rem;
 }
 
-.carouselCard {
-  width: 180px;
-  text-align: center;
-  background: #2a2a2a;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-  padding: 10px;
-  margin: 0 auto;
+.swiperSlide {
+  width: 260px !important;
+  transition: all 0.3s ease;
 }
 
-.carouselCard img {
+/* Member Card */
+.memberCard {
+  position: relative;
+  background: linear-gradient(180deg, rgba(26, 26, 46, 0.5) 0%, rgba(10, 10, 15, 0.9) 100%);
+  border: 1px solid rgba(229, 9, 20, 0.2);
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.memberCard:hover {
+  transform: translateY(-10px);
+  border-color: rgba(229, 9, 20, 0.6);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.5),
+    0 0 30px rgba(229, 9, 20, 0.2);
+}
+
+.cardGlow {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(229, 9, 20, 0.15) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.memberCard:hover .cardGlow {
+  opacity: 1;
+}
+
+.memberImageWrapper {
+  position: relative;
   width: 100%;
-  height: auto;
+  height: 280px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.memberImageWrapper img {
+  width: 100%;
+  height: 100%;
   object-fit: contain;
-  border-radius: 10px;
+  transition: all 0.4s ease;
+  filter: saturate(0.9);
 }
 
-.carouselCard h3 {
-  margin: 10px 0 5px;
+.memberCard:hover .memberImageWrapper img {
+  transform: scale(1.05);
+  filter: saturate(1.1);
+}
+
+.imageOverlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60%;
+  background: linear-gradient(180deg, transparent, rgba(10, 10, 15, 0.9));
+  pointer-events: none;
+}
+
+.memberInfo {
+  padding: 1.5rem;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+
+.memberCodename {
+  display: block;
+  font-family: 'Special Elite', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #e50914;
+  margin-bottom: 0.5rem;
+}
+
+.memberName {
+  font-family: 'Libre Baskerville', serif;
   font-size: 1.2rem;
-  color: #ffffff;
+  font-weight: 700;
+  color: #e8e6e3;
+  margin: 0 0 0.3rem;
+  transition: color 0.3s ease;
 }
 
-.carouselCard p {
-  font-size: 0.9rem;
-  color: #b0b0b0;
+.memberCard:hover .memberName {
+  color: #e50914;
+  text-shadow: 0 0 10px rgba(229, 9, 20, 0.5);
 }
 
-/* Team Details */
-.teamDetails {
-  background-color: #1e1e1e;
-  color: #e0e0e0;
-  padding: 30px;
-  margin-top: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6);
-  margin: 2rem;
-}
-
-.teamDetails h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  border-bottom: 2px solid #444;
-  padding-bottom: 10px;
-}
-
-.teamTable {
-  width: 90%;
-  margin: 0 auto;
-  border-collapse: separate;
-  border-spacing: 0 10px;
-  margin-top: 1.5rem;
-}
-
-.teamTable th,
-.teamTable td {
-  border: none;
-  padding: 15px;
-  text-align: left;
-  vertical-align: top;
-  background-color: #2a2a2a;
-}
-
-.teamTable th:first-child,
-.teamTable td:first-child {
-  text-align: center;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-}
-
-.teamTable th:last-child,
-.teamTable td:last-child {
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
-.teamTable th {
-  color: #ffffff;
-  font-size: 1.3rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.teamTable td {
-  color: #b0b0b0;
-  font-size: 1rem;
-}
-
-.teamTable ul {
-  list-style-type: none;
-  padding: 0;
+.memberRole {
+  font-family: 'Special Elite', monospace;
+  font-size: 0.85rem;
+  color: rgba(232, 230, 227, 0.6);
   margin: 0;
 }
 
-.teamTable ul li {
-  margin: 0.3rem 0;
-  color: #d0d0d0;
-  position: relative;
-  padding-bottom: 10px;
-}
-
-.teamTable ul li:not(:last-child)::after {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 1px;
-  background-color: #444;
+.cardBorderEffect {
   position: absolute;
   bottom: 0;
   left: 0;
-}
-
-.teamTable tr:hover td {
-  background-color: #333;
-  transition: background-color 0.3s ease;
-}
-
-.teamTable th:nth-child(odd),
-.teamTable td:nth-child(odd) {
-  background-color: #252525;
-}
-
-.teamTable th:nth-child(even),
-.teamTable td:nth-child(even) {
-  background-color: #2a2a2a;
-}
-
-/* Event Details */
-.eventDetails {
-  background-color: #1e1e1e;
-  color: #e0e0e0;
-  padding: 30px;
-  margin-top: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6);
-  margin: 2rem;
-}
-
-.eventDetails h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-  color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  border-bottom: 2px solid #444;
-  padding-bottom: 10px;
-}
-
-.eventTable {
-  width: 90%;
-  margin: 0 auto;
-  border-collapse: separate;
-  border-spacing: 0 10px;
-  margin-top: 1.5rem;
-}
-
-.eventTable th,
-.eventTable td {
-  border: none;
-  padding: 15px;
-  text-align: left;
-  vertical-align: top;
-  background-color: #2a2a2a;
-}
-
-.eventTable th:first-child,
-.eventTable td:first-child {
-  text-align: center;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-}
-
-.eventTable th:last-child,
-.eventTable td:last-child {
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
-.eventTable th {
-  color: #ffffff;
-  font-size: 1.3rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.eventTable td {
-  color: #b0b0b0;
-  font-size: 1rem;
-}
-
-.eventTable ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.eventTable ul li {
-  margin: 0.3rem 0;
-  color: #d0d0d0;
-  position: relative;
-  padding-bottom: 10px;
-}
-
-.eventTable ul li:not(:last-child)::after {
-  content: "";
-  display: block;
   width: 100%;
-  height: 1px;
-  background-color: #444;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #e50914, transparent);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
 }
 
-.eventTable tr:hover td {
-  background-color: #333;
-  transition: background-color 0.3s ease;
+.memberCard:hover .cardBorderEffect {
+  transform: scaleX(1);
 }
 
-.eventTable th:nth-child(odd),
-.eventTable td:nth-child(odd) {
-  background-color: #252525;
-}
-
-.eventTable th:nth-child(even),
-.eventTable td:nth-child(even) {
-  background-color: #2a2a2a;
-}
-
-/* Swiper Navigation */
+/* Swiper Navigation Overrides */
 :global(.swiper-button-next),
 :global(.swiper-button-prev) {
-  color: #fff !important;
-  background-color: #333;
-  border-radius: 50%;
-  width: 40px !important;
-  height: 40px !important;
+  color: #e50914 !important;
+  background: rgba(229, 9, 20, 0.1);
+  border: 1px solid rgba(229, 9, 20, 0.3);
+  width: 44px !important;
+  height: 44px !important;
+  transition: all 0.3s ease;
 }
 
 :global(.swiper-button-next::after),
 :global(.swiper-button-prev::after) {
   font-size: 1rem !important;
+  font-weight: bold;
 }
 
 :global(.swiper-button-next:hover),
 :global(.swiper-button-prev:hover) {
-  background-color: #555;
+  background: rgba(229, 9, 20, 0.3);
+  border-color: #e50914;
+  box-shadow: 0 0 20px rgba(229, 9, 20, 0.4);
 }
 
-@media (max-width: 600px) {
-  .teamTable,
-  .eventTable {
-    width: 100%;
+/* ============================================
+   SQUAD SECTION
+   ============================================ */
+.squadSection {
+  padding: 3rem 0;
+  margin-bottom: 3rem;
+}
+
+.squadGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.squadCard {
+  background: linear-gradient(180deg, rgba(26, 26, 46, 0.4) 0%, rgba(10, 10, 15, 0.8) 100%);
+  border: 1px solid rgba(229, 9, 20, 0.2);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.squadCard:hover {
+  border-color: rgba(229, 9, 20, 0.5);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(229, 9, 20, 0.1);
+  transform: translateY(-5px);
+}
+
+.squadHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(229, 9, 20, 0.2);
+}
+
+.squadIcon {
+  font-size: 1.5rem;
+  filter: drop-shadow(0 0 5px rgba(229, 9, 20, 0.5));
+}
+
+.squadName {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #e8e6e3;
+  margin: 0;
+}
+
+.squadMembers {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.squadMember {
+  font-family: 'Special Elite', monospace;
+  font-size: 0.9rem;
+  color: rgba(232, 230, 227, 0.8);
+  padding: 0.5rem 0;
+  padding-left: 1.2rem;
+  position: relative;
+  border-bottom: 1px solid rgba(229, 9, 20, 0.1);
+}
+
+.squadMember::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  background: #e50914;
+  border-radius: 50%;
+}
+
+.squadMember:last-child {
+  border-bottom: none;
+}
+
+/* ============================================
+   MISSION SECTION
+   ============================================ */
+.missionSection {
+  padding: 3rem 0;
+}
+
+.missionGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.missionCard {
+  background: linear-gradient(135deg, rgba(229, 9, 20, 0.05) 0%, rgba(26, 26, 46, 0.4) 100%);
+  border: 1px solid rgba(229, 9, 20, 0.2);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.missionCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: #e50914;
+  box-shadow: 0 0 10px rgba(229, 9, 20, 0.5);
+}
+
+.missionCard:hover {
+  border-color: rgba(229, 9, 20, 0.5);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(229, 9, 20, 0.1);
+  transform: translateY(-5px);
+}
+
+.missionName {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #e50914;
+  margin: 0 0 1rem;
+}
+
+.missionHeads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.headName {
+  font-family: 'Special Elite', monospace;
+  font-size: 0.85rem;
+  color: rgba(232, 230, 227, 0.85);
+  padding: 0.4rem 0.8rem;
+  background: rgba(229, 9, 20, 0.1);
+  border: 1px solid rgba(229, 9, 20, 0.2);
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .teamPage {
+    padding: 80px 1rem 3rem;
+  }
+  
+  .swiperContainer {
+    padding: 1rem;
+  }
+  
+  .swiperSlide {
+    width: 240px !important;
+  }
+  
+  .memberImageWrapper {
+    height: 220px;
+  }
+  
+  .squadGrid,
+  .missionGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .sectionTitle {
+    font-size: 1.5rem;
   }
 }
