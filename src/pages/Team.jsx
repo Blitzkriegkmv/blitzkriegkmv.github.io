@@ -6,6 +6,8 @@ import 'swiper/css/effect-coverflow'
 import styles from './Team.module.css'
 
 const teamMembers = [
+  { name: 'Riya Arora', role: 'Executive', codename: 'The Planner', image: '/media/team_25/riya.png' },
+  { name: 'Soumya Ranjan', role: 'Executive', codename: 'The Analyst', image: '/media/team_25/soumya.png' },
   { name: 'Priyanshi Jain', role: 'President', codename: 'The Commander', image: '/media/team_25/priyanshi.png' },
   { name: 'Nancy Gupta', role: 'Treasurer', codename: 'The Keeper', image: '/media/team_25/nancy.png' },
   { name: 'Kanishka Rai', role: 'Secretary', codename: 'The Strategist', image: '/media/team_25/kanishka.png' },
@@ -15,8 +17,6 @@ const teamMembers = [
   { name: 'Anjali', role: 'Senior Executive', codename: 'The Artist', image: '/media/team_25/anjali.png' },
   { name: 'Isha Sharma', role: 'Executive', codename: 'The Connector', image: '/media/team_25/Isha.png' },
   { name: 'Natya', role: 'Executive', codename: 'The Builder', image: '/media/team_25/Natya.png' },
-  { name: 'Riya Arora', role: 'Executive', codename: 'The Planner', image: '/media/team_25/riya.png' },
-  { name: 'Soumya Ranjan', role: 'Executive', codename: 'The Analyst', image: '/media/team_25/soumya.png' },
 ]
 
 const teamDetails = [
@@ -65,22 +65,26 @@ function Team() {
           effect="coverflow"
           grabCursor={true}
           centeredSlides={true}
-          slidesPerView="auto"
+          slidesPerView={5}
+          spaceBetween={0}
+          speed={600}
+          initialSlide={2}
           coverflowEffect={{
             rotate: 0,
-            stretch: 0,
-            depth: 100,
-            modifier: 2.5,
+            stretch: 80,
+            depth: 150,
+            modifier: 1,
             slideShadows: false,
           }}
           navigation
           autoplay={{ delay: 4000, disableOnInteraction: false, pauseOnMouseEnter: true }}
           loop={true}
           breakpoints={{
-            320: { slidesPerView: 1 },
-            600: { slidesPerView: 2 },
-            900: { slidesPerView: 3 },
-            1200: { slidesPerView: 4 },
+            320: { slidesPerView: 1, coverflowEffect: { stretch: 0, depth: 100 } },
+            480: { slidesPerView: 2, coverflowEffect: { stretch: 40, depth: 120 } },
+            768: { slidesPerView: 3, coverflowEffect: { stretch: 60, depth: 130 } },
+            1024: { slidesPerView: 4, coverflowEffect: { stretch: 70, depth: 140 } },
+            1280: { slidesPerView: 5, coverflowEffect: { stretch: 80, depth: 150 } },
           }}
           className={styles.swiperContainer}
         >
@@ -106,13 +110,26 @@ function Team() {
 
       {/* Squad Details */}
       <section className={styles.squadSection}>
-        <h2 className={styles.sectionTitle}>
-          Squad Divisions
-        </h2>
+        <div className={styles.sectionHeader}>
+          <div className={styles.sectionDecor}>
+            <div className={styles.decorLine} />
+            <span className={styles.decorDot} />
+            <div className={styles.decorLine} />
+          </div>
+          <h2 className={styles.sectionTitle}>Squad Divisions</h2>
+          <p className={styles.sectionSubtitle}>Specialized units. Strategic formation.</p>
+        </div>
         <div className={styles.squadGrid}>
           {teamDetails.map((item, index) => (
-            <div key={index} className={styles.squadCard}>
+            <div 
+              key={index} 
+              className={styles.squadCard}
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <div className={styles.squadCardGlow} />
+              <div className={styles.squadCardBorder} />
               <div className={styles.squadHeader}>
+                <span className={styles.squadNumber}>{String(index + 1).padStart(2, '0')}</span>
                 <h3 className={styles.squadName}>{item.team}</h3>
               </div>
               <ul className={styles.squadMembers}>
@@ -129,17 +146,36 @@ function Team() {
 
       {/* Mission Leaders */}
       <section className={styles.missionSection}>
-        <h2 className={styles.sectionTitle}>
-          Mission Leaders
-        </h2>
+        <div className={styles.sectionHeader}>
+          <div className={styles.sectionDecor}>
+            <div className={styles.decorLine} />
+            <span className={styles.decorDot} />
+            <div className={styles.decorLine} />
+          </div>
+          <h2 className={styles.sectionTitle}>Mission Leaders</h2>
+          <p className={styles.sectionSubtitle}>Event commanders. Battle strategists.</p>
+        </div>
         <div className={styles.missionGrid}>
           {eventDetails.map((item, index) => (
-            <div key={index} className={styles.missionCard}>
-              <h3 className={styles.missionName}>{item.event}</h3>
-              <div className={styles.missionHeads}>
-                {item.heads.map((head, idx) => (
-                  <span key={idx} className={styles.headName}>{head}</span>
-                ))}
+            <div 
+              key={index} 
+              className={styles.missionCard}
+              style={{ animationDelay: `${index * 0.08}s` }}
+            >
+              <div className={styles.missionCardGlow} />
+              <div className={styles.missionAccent} />
+              <div className={styles.missionContent}>
+                <span className={styles.missionTag}>EVENT {String(index + 1).padStart(2, '0')}</span>
+                <h3 className={styles.missionName}>{item.event}</h3>
+                <div className={styles.missionDivider} />
+                <div className={styles.missionHeads}>
+                  {item.heads.map((head, idx) => (
+                    <div key={idx} className={styles.headBadge}>
+                      <span className={styles.headLabel}>Lead {idx + 1}</span>
+                      <span className={styles.headName}>{head}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
