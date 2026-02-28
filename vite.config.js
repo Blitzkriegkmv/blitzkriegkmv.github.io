@@ -6,5 +6,5 @@ import react from '@vitejs/plugin-react'
 // For forks (project page)                → '/blitzkriegkmv.github.io/'
 export default defineConfig({
   plugins: [react()],
-  base: process.env.BASE_PATH || '/',
+  base: '/',
 })
