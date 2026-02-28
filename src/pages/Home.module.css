@@ -1,0 +1,691 @@
+/* ============================================
+   HOME PAGE - Stranger Things Theme
+   The Gate Opens • Enter the Upside Down
+   ============================================ */
+
+.homePage {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  padding-top: 60px;
+}
+
+.homePage.loaded {
+  animation: fadeInPage 1s ease-out;
+}
+
+@keyframes fadeInPage {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Floating Particles (Upside Down Spores) */
+.particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: radial-gradient(circle, rgba(229, 9, 20, 0.8) 0%, transparent 70%);
+  border-radius: 50%;
+  animation: floatParticle linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes floatParticle {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-100px) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+/* ============================================
+   HERO SECTION - The Gate
+   ============================================ */
+.heroSection {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  background: 
+    radial-gradient(ellipse at 50% 50%, rgba(139, 0, 0, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 100%, rgba(45, 27, 78, 0.3) 0%, transparent 50%);
+  z-index: 2;
+}
+
+.heroVignette {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, transparent 40%, rgba(5, 5, 8, 0.8) 100%);
+  pointer-events: none;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 3;
+  max-width: 900px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Title Styling */
+.titleWrapper {
+  position: relative;
+  margin-bottom: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.preTitle {
+  display: block;
+  font-family: 'Special Elite', monospace;
+  font-size: 1.2rem;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  color: rgba(232, 230, 227, 0.7);
+  margin-bottom: 0.5rem;
+  animation: flickerIn 2s ease-out;
+}
+
+@keyframes flickerIn {
+  0%, 10%, 12%, 20%, 22% { opacity: 0; }
+  11%, 21%, 100% { opacity: 1; }
+}
+
+.mainTitle {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(3.5rem, 12vw, 8rem);
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  margin: 0;
+  color: #e50914;
+  text-shadow: 
+    0 0 10px rgba(229, 9, 20, 0.8),
+    0 0 20px rgba(229, 9, 20, 0.6),
+    0 0 40px rgba(229, 9, 20, 0.4),
+    0 0 80px rgba(229, 9, 20, 0.2),
+    2px 2px 0 #1a0a0a,
+    4px 4px 0 #0a0505;
+  animation: titleGlow 3s ease-in-out infinite alternate;
+}
+
+@keyframes titleGlow {
+  0% {
+    text-shadow: 
+      0 0 10px rgba(229, 9, 20, 0.8),
+      0 0 20px rgba(229, 9, 20, 0.6),
+      0 0 40px rgba(229, 9, 20, 0.4),
+      0 0 80px rgba(229, 9, 20, 0.2);
+  }
+  100% {
+    text-shadow: 
+      0 0 15px rgba(229, 9, 20, 1),
+      0 0 30px rgba(229, 9, 20, 0.8),
+      0 0 60px rgba(229, 9, 20, 0.6),
+      0 0 100px rgba(229, 9, 20, 0.4);
+  }
+}
+
+.yearBadge {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.yearText {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 2.5rem;
+  color: #e50914;
+  text-shadow: 0 0 20px rgba(229, 9, 20, 0.6);
+  letter-spacing: 4px;
+}
+
+/* Theme Tag */
+.themeTag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+  padding: 0.8rem 2rem;
+  background: linear-gradient(90deg, transparent, rgba(229, 9, 20, 0.1), transparent);
+  border-top: 1px solid rgba(229, 9, 20, 0.3);
+  border-bottom: 1px solid rgba(229, 9, 20, 0.3);
+  font-family: 'Special Elite', monospace;
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+  color: rgba(232, 230, 227, 0.8);
+}
+
+.themeIcon {
+  color: #e50914;
+  font-size: 0.7rem;
+}
+
+/* Event Info */
+.eventInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.infoLabel {
+  font-family: 'Special Elite', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  color: rgba(232, 230, 227, 0.5);
+}
+
+.infoValue {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #e8e6e3;
+  text-shadow: 0 0 10px rgba(229, 9, 20, 0.3);
+}
+
+.infoDivider {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(180deg, transparent, rgba(229, 9, 20, 0.5), transparent);
+}
+
+/* Tagline */
+.tagline {
+  font-family: 'Special Elite', monospace;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(232, 230, 227, 0.7);
+  margin: 1.5rem 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tagline strong {
+  color: #e50914;
+  text-shadow: 0 0 10px rgba(229, 9, 20, 0.5);
+}
+
+/* Hero Buttons */
+.heroButtons {
+  margin-top: 2rem;
+}
+
+/* Scroll Indicator */
+.scrollIndicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(232, 230, 227, 0.5);
+  font-family: 'Special Elite', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  animation: bounce 2s infinite;
+}
+
+.scrollArrow {
+  font-size: 1.5rem;
+  color: #e50914;
+  text-shadow: 0 0 10px rgba(229, 9, 20, 0.5);
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+  40% { transform: translateX(-50%) translateY(-10px); }
+  60% { transform: translateX(-50%) translateY(-5px); }
+}
+
+/* ============================================
+   LORE SECTION - Hawkins Lab
+   ============================================ */
+.loreSection {
+  position: relative;
+  padding: 6rem 2rem;
+  background: 
+    linear-gradient(180deg, rgba(5, 5, 8, 1) 0%, rgba(26, 26, 46, 0.3) 50%, rgba(5, 5, 8, 1) 100%);
+  z-index: 2;
+}
+
+/* Section Divider */
+.sectionDivider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.dividerLine {
+  flex: 1;
+  max-width: 200px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(229, 9, 20, 0.5), rgba(229, 9, 20, 0.5), transparent);
+}
+
+.dividerText {
+  font-family: 'Special Elite', monospace;
+  font-size: 0.8rem;
+  letter-spacing: 6px;
+  color: #e50914;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid rgba(229, 9, 20, 0.3);
+  background: rgba(229, 9, 20, 0.05);
+}
+
+/* Lore Content */
+.loreContent {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.loreLeft {
+  position: sticky;
+  top: 100px;
+}
+
+.chapterNumber {
+  display: block;
+  font-family: 'Special Elite', monospace;
+  font-size: 0.8rem;
+  letter-spacing: 4px;
+  color: rgba(229, 9, 20, 0.7);
+  margin-bottom: 1rem;
+}
+
+.sectionTitle {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #e8e6e3;
+  margin: 0;
+}
+
+.titleAccent {
+  color: #e50914;
+  text-shadow: 0 0 20px rgba(229, 9, 20, 0.5);
+}
+
+.titleUnderline {
+  width: 80px;
+  height: 3px;
+  background: linear-gradient(90deg, #e50914, transparent);
+  margin-top: 1.5rem;
+  box-shadow: 0 0 10px rgba(229, 9, 20, 0.5);
+}
+
+/* Lore Right */
+.loreRight {
+  padding-top: 1rem;
+}
+
+.loreText {
+  font-family: 'Special Elite', monospace;
+  font-size: 1rem;
+  line-height: 1.9;
+  color: rgba(232, 230, 227, 0.85);
+  margin-bottom: 1.5rem;
+}
+
+.loreText strong {
+  color: #e50914;
+}
+
+.loreText em {
+  color: rgba(229, 9, 20, 0.8);
+  font-style: normal;
+}
+
+.warningText {
+  font-family: 'Special Elite', monospace;
+  font-size: 0.95rem;
+  color: #e50914;
+  padding: 1rem 1.5rem;
+  background: rgba(229, 9, 20, 0.1);
+  border-left: 3px solid #e50914;
+  margin: 2rem 0;
+  animation: warningPulse 2s ease-in-out infinite;
+}
+
+@keyframes warningPulse {
+  0%, 100% { background: rgba(229, 9, 20, 0.1); }
+  50% { background: rgba(229, 9, 20, 0.15); }
+}
+
+/* ============================================
+   MISSION SECTION - The Final Battle
+   ============================================ */
+.missionSection {
+  position: relative;
+  padding: 6rem 2rem;
+  background: 
+    linear-gradient(180deg, rgba(5, 5, 8, 1) 0%, rgba(26, 10, 46, 0.2) 50%, rgba(5, 5, 8, 1) 100%);
+  z-index: 2;
+  overflow: hidden;
+}
+
+.missionVines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(90deg, rgba(26, 74, 26, 0.1) 1px, transparent 1px),
+    linear-gradient(rgba(26, 74, 26, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.missionContent {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.missionText {
+  order: 1;
+}
+
+.missionParagraph {
+  font-family: 'Special Elite', monospace;
+  font-size: 1rem;
+  line-height: 1.9;
+  color: rgba(232, 230, 227, 0.85);
+  margin-bottom: 1.5rem;
+}
+
+.missionParagraph em {
+  color: rgba(229, 9, 20, 0.8);
+  font-style: normal;
+}
+
+/* Quote Box */
+.missionQuote {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem 2rem;
+  background: rgba(229, 9, 20, 0.05);
+  border: 1px solid rgba(229, 9, 20, 0.2);
+  margin-top: 2rem;
+}
+
+.missionQuote p {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.3rem;
+  font-style: italic;
+  color: #e8e6e3;
+  margin: 0;
+  flex: 1;
+  text-align: center;
+}
+
+.quoteIcon {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 3rem;
+  color: #e50914;
+  line-height: 1;
+  opacity: 0.6;
+}
+
+/* Mission Visual - Portal */
+.missionVisual {
+  order: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.portalFrame {
+  position: relative;
+  width: 280px;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.portalGlow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(229, 9, 20, 0.3) 0%, transparent 70%);
+  animation: portalPulse 3s ease-in-out infinite;
+}
+
+@keyframes portalPulse {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+.portalInner {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: 
+    radial-gradient(circle at 30% 30%, rgba(45, 27, 78, 0.8) 0%, transparent 50%),
+    radial-gradient(circle, #0a0a0f 0%, #1a0a2e 100%);
+  border: 2px solid rgba(229, 9, 20, 0.5);
+  box-shadow: 
+    0 0 30px rgba(229, 9, 20, 0.4),
+    inset 0 0 60px rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: portalRotate 20s linear infinite;
+}
+
+@keyframes portalRotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.portalText {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-align: center;
+  color: #e50914;
+  text-shadow: 0 0 20px rgba(229, 9, 20, 0.8);
+  animation: portalRotate 20s linear infinite reverse;
+}
+
+/* ============================================
+   CTA SECTION
+   ============================================ */
+.ctaSection {
+  position: relative;
+  padding: 6rem 2rem;
+  text-align: center;
+  background: 
+    linear-gradient(180deg, rgba(5, 5, 8, 1) 0%, rgba(139, 0, 0, 0.1) 50%, rgba(5, 5, 8, 1) 100%);
+  z-index: 2;
+}
+
+.ctaContent {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #e8e6e3;
+  margin-bottom: 1rem;
+}
+
+.ctaText {
+  font-family: 'Special Elite', monospace;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(232, 230, 227, 0.7);
+  margin-bottom: 2rem;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 1024px) {
+  .loreContent,
+  .missionContent {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .loreLeft {
+    position: relative;
+    top: 0;
+  }
+  
+  .missionVisual {
+    order: 1;
+  }
+  
+  .missionText {
+    order: 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .homePage {
+    padding-top: 80px;
+  }
+  
+  .heroSection {
+    padding: 3rem 1.5rem;
+    min-height: auto;
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+  }
+  
+  .preTitle {
+    font-size: 0.9rem;
+    letter-spacing: 4px;
+  }
+  
+  .mainTitle {
+    letter-spacing: 0.1em;
+  }
+  
+  .themeTag {
+    font-size: 0.7rem;
+    padding: 0.6rem 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .eventInfo {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .infoDivider {
+    width: 60px;
+    height: 1px;
+  }
+  
+  .scrollIndicator {
+    display: none;
+  }
+  
+  .loreSection,
+  .missionSection,
+  .ctaSection {
+    padding: 4rem 1.5rem;
+  }
+  
+  .sectionTitle {
+    font-size: 2rem;
+  }
+  
+  .portalFrame {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .portalInner {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .portalText {
+    font-size: 0.9rem;
+  }
+  
+  .missionQuote {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  
+  .missionQuote p {
+    font-size: 1.1rem;
+  }
+  
+  .quoteIcon {
+    font-size: 2rem;
+  }
+  
+  .ctaTitle {
+    font-size: 2rem;
+  }
+}
