@@ -137,14 +137,12 @@ function Home() {
             </div>
           </div>
 
-          <div className={styles.missionVisual}>
+          {/* <div className={styles.missionVisual}>
             <div className={styles.portalFrame}>
               <div className={styles.portalGlow} />
-              <div className={styles.portalInner}>
-                <span className={styles.portalText}>THE<br/>UPSIDE<br/>DOWN</span>
-              </div>
+              <img src="/media/door.png" alt="The Gate" className={styles.portalDoorImage} />
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
