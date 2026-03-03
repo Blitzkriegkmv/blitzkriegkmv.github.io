@@ -30,8 +30,8 @@ function Home() {
         <div className={styles.heroContent}>
           <div className={styles.titleWrapper}>
             <span className={styles.preTitle}>Enter the</span>
-            <h1 className={styles.mainTitle}>BLITZKRIEG</h1>
-            <div className={styles.yearBadge}>
+            <div className={styles.titleRow}>
+              <h1 className={styles.mainTitle}>BLITZKRIEG</h1>
               <span className={styles.yearText}>'26</span>
             </div>
           </div>
@@ -59,13 +59,6 @@ function Home() {
 
           <div className={styles.heroButtons}>
             <Link to="/events" className="register-button">Explore Events</Link>
-          </div>
-        </div>
-
-        <div className={styles.scrollIndicator}>
-          <span>Scroll to Enter</span>
-          <div className={styles.scrollArrow}>
-            <FontAwesomeIcon icon={faChevronDown} />
           </div>
         </div>
       </section>

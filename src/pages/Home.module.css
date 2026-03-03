@@ -159,17 +159,27 @@
   }
 }
 
-.yearBadge {
-  display: inline-block;
-  margin-top: 1rem;
+.titleRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.3em;
 }
 
 .yearText {
   font-family: 'Libre Baskerville', serif;
-  font-size: 2.5rem;
+  font-size: clamp(3.5rem, 12vw, 8rem);
+  font-weight: 700;
   color: #e50914;
-  text-shadow: 0 0 20px rgba(229, 9, 20, 0.6);
-  letter-spacing: 4px;
+  text-shadow: 
+    0 0 10px rgba(229, 9, 20, 0.8),
+    0 0 20px rgba(229, 9, 20, 0.6),
+    0 0 40px rgba(229, 9, 20, 0.4),
+    0 0 80px rgba(229, 9, 20, 0.2),
+    2px 2px 0 #1a0a0a,
+    4px 4px 0 #0a0505;
+  letter-spacing: 0.15em;
+  animation: titleGlow 3s ease-in-out infinite alternate;
 }
 
 /* Theme Tag */
