@@ -71,7 +71,9 @@
   text-align: center;
   padding: 4rem 2rem;
   background: 
-    radial-gradient(ellipse at 50% 50%, rgba(139, 0, 0, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 40%, rgba(139, 0, 0, 0.2) 0%, transparent 55%),
+    radial-gradient(ellipse at 20% 80%, rgba(45, 27, 78, 0.25) 0%, transparent 40%),
+    radial-gradient(ellipse at 80% 80%, rgba(45, 27, 78, 0.25) 0%, transparent 40%),
     radial-gradient(ellipse at 50% 100%, rgba(45, 27, 78, 0.3) 0%, transparent 50%);
   z-index: 2;
 }
@@ -306,6 +308,12 @@
   max-width: 200px;
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(229, 9, 20, 0.5), rgba(229, 9, 20, 0.5), transparent);
+  animation: lineShimmer 3s ease-in-out infinite;
+}
+
+@keyframes lineShimmer {
+  0%, 100% { opacity: 0.4; transform: scaleX(0.8); }
+  50% { opacity: 1; transform: scaleX(1); }
 }
 
 .dividerText {
@@ -400,6 +408,16 @@
 @keyframes warningPulse {
   0%, 100% { background: rgba(229, 9, 20, 0.1); }
   50% { background: rgba(229, 9, 20, 0.15); }
+}
+
+.warningText::after {
+  content: ' _';
+  animation: cursorBlink 1s step-end infinite;
+}
+
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
 /* ============================================
@@ -500,6 +518,31 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: visible;
+}
+
+/* Outer orbital rings */
+.portalFrame::before {
+  content: '';
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  border: 1px dashed rgba(229, 9, 20, 0.22);
+  animation: portalRotate 14s linear infinite;
+  pointer-events: none;
+}
+
+.portalFrame::after {
+  content: '';
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  border: 1px solid rgba(45, 27, 78, 0.7);
+  box-shadow: 0 0 20px rgba(229, 9, 20, 0.06), inset 0 0 20px rgba(229, 9, 20, 0.06);
+  animation: portalRotate 28s linear infinite reverse;
+  pointer-events: none;
 }
 
 .portalGlow {

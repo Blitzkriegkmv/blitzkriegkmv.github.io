@@ -43,7 +43,7 @@ function Home() {
           <div className={styles.eventInfo}>
             <div className={styles.infoItem}>
               <span className={styles.infoLabel}>DATE</span>
-              <span className={styles.infoValue}>26TH FEB 2026</span>
+              <span className={styles.infoValue}>12TH MARCH 2026</span>
             </div>
             <div className={styles.infoDivider} />
             <div className={styles.infoItem}>
@@ -160,7 +160,7 @@ function Home() {
         <div className={styles.ctaContent}>
           <h2 className={styles.ctaTitle}>Ready to Enter?</h2>
           <p className={styles.ctaText}>
-            The gate closes on April 2nd, 2025. Don't miss your chance to be part of the final battle.
+            The gate closes on March 12th, 2026. Don't miss your chance to be part of the final battle.
           </p>
           <Link to="/events" className="register-button">View All Events</Link>
         </div>
