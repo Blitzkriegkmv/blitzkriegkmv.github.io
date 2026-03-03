@@ -71,7 +71,9 @@
   text-align: center;
   padding: 4rem 2rem;
   background: 
-    radial-gradient(ellipse at 50% 50%, rgba(139, 0, 0, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 40%, rgba(139, 0, 0, 0.2) 0%, transparent 55%),
+    radial-gradient(ellipse at 20% 80%, rgba(45, 27, 78, 0.25) 0%, transparent 40%),
+    radial-gradient(ellipse at 80% 80%, rgba(45, 27, 78, 0.25) 0%, transparent 40%),
     radial-gradient(ellipse at 50% 100%, rgba(45, 27, 78, 0.3) 0%, transparent 50%);
   z-index: 2;
 }
@@ -157,17 +159,27 @@
   }
 }
 
-.yearBadge {
-  display: inline-block;
-  margin-top: 1rem;
+.titleRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.3em;
 }
 
 .yearText {
   font-family: 'Libre Baskerville', serif;
-  font-size: 2.5rem;
+  font-size: clamp(3.5rem, 12vw, 8rem);
+  font-weight: 700;
   color: #e50914;
-  text-shadow: 0 0 20px rgba(229, 9, 20, 0.6);
-  letter-spacing: 4px;
+  text-shadow: 
+    0 0 10px rgba(229, 9, 20, 0.8),
+    0 0 20px rgba(229, 9, 20, 0.6),
+    0 0 40px rgba(229, 9, 20, 0.4),
+    0 0 80px rgba(229, 9, 20, 0.2),
+    2px 2px 0 #1a0a0a,
+    4px 4px 0 #0a0505;
+  letter-spacing: 0.15em;
+  animation: titleGlow 3s ease-in-out infinite alternate;
 }
 
 /* Theme Tag */
@@ -306,6 +318,12 @@
   max-width: 200px;
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(229, 9, 20, 0.5), rgba(229, 9, 20, 0.5), transparent);
+  animation: lineShimmer 3s ease-in-out infinite;
+}
+
+@keyframes lineShimmer {
+  0%, 100% { opacity: 0.4; transform: scaleX(0.8); }
+  50% { opacity: 1; transform: scaleX(1); }
 }
 
 .dividerText {
@@ -402,6 +420,16 @@
   50% { background: rgba(229, 9, 20, 0.15); }
 }
 
+.warningText::after {
+  content: ' _';
+  animation: cursorBlink 1s step-end infinite;
+}
+
+@keyframes cursorBlink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
 /* ============================================
    MISSION SECTION - The Final Battle
    ============================================ */
@@ -495,20 +523,55 @@
 
 .portalFrame {
   position: relative;
-  width: 280px;
-  height: 280px;
+  width: 340px;
+  height: 420px;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: visible;
+}
+
+/* No bounding boxes — just ambient atmosphere */
+.portalFrame::before {
+  content: '';
+  position: absolute;
+  inset: -40px;
+  background: radial-gradient(ellipse at center, rgba(229, 9, 20, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+  animation: portalPulse 5s ease-in-out infinite;
 }
 
 .portalGlow {
   position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 70%, rgba(229, 9, 20, 0.15) 0%, transparent 55%);
+  animation: portalPulse 3s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.portalDoorImage {
+  position: relative;
   width: 100%;
   height: 100%;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(229, 9, 20, 0.3) 0%, transparent 70%);
-  animation: portalPulse 3s ease-in-out infinite;
+  padding-top: 2.5rem;
+  padding-bottom: 5.5rem;
+  object-fit: contain;
+  filter:
+    brightness(0.8)
+    saturate(0.75)
+    drop-shadow(0 0 20px rgba(229, 9, 20, 0.5));
+  animation: doorFlicker 6s ease-in-out infinite alternate;
+  z-index: 1;
+  -webkit-mask-image: radial-gradient(ellipse 75% 80% at center, #000 35%, transparent 72%);
+  mask-image: radial-gradient(ellipse 75% 80% at center, #000 35%, transparent 72%);
+}
+
+@keyframes doorFlicker {
+  0%   { filter: brightness(0.7) saturate(0.65) drop-shadow(0 0 15px rgba(229, 9, 20, 0.45)); }
+  40%  { filter: brightness(0.82) saturate(0.8) drop-shadow(0 0 28px rgba(229, 9, 20, 0.65)); }
+  60%  { filter: brightness(0.72) saturate(0.7) drop-shadow(0 0 18px rgba(229, 9, 20, 0.5)); }
+  100% { filter: brightness(0.85) saturate(0.85) drop-shadow(0 0 32px rgba(229, 9, 20, 0.7)); }
 }
 
 @keyframes portalPulse {

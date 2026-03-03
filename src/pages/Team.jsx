@@ -6,36 +6,31 @@ import 'swiper/css/effect-coverflow'
 import styles from './Team.module.css'
 
 const teamMembers = [
-  { name: 'Riya Arora', role: 'Executive', codename: 'The Planner', image: '/media/team_25/riya.png' },
-  { name: 'Soumya Ranjan', role: 'Executive', codename: 'The Analyst', image: '/media/team_25/soumya.png' },
-  { name: 'Priyanshi Jain', role: 'President', codename: 'The Commander', image: '/media/team_25/priyanshi.png' },
-  { name: 'Nancy Gupta', role: 'Treasurer', codename: 'The Keeper', image: '/media/team_25/nancy.png' },
-  { name: 'Kanishka Rai', role: 'Secretary', codename: 'The Strategist', image: '/media/team_25/kanishka.png' },
-  { name: 'Sourabh Pal', role: 'Senior Executive', codename: 'The Coder', image: '/media/team_25/Sourabh.png' },
-  { name: 'Sundarm Yadav', role: 'Senior Executive', codename: 'The Voice', image: '/media/team_25/Sundarm.png' },
-  { name: 'Aleesha Singh', role: 'Senior Executive', codename: 'The Wordsmith', image: '/media/team_25/aleesha.png' },
-  { name: 'Anjali', role: 'Senior Executive', codename: 'The Artist', image: '/media/team_25/anjali.png' },
-  { name: 'Isha Sharma', role: 'Executive', codename: 'The Connector', image: '/media/team_25/Isha.png' },
-  { name: 'Natya', role: 'Executive', codename: 'The Builder', image: '/media/team_25/Natya.png' },
+  { name: 'Lavanya Sharma', role: 'Executive', codename: 'The Designer', image: '/media/team_26/lavanya.jpg' },
+  { name: 'Parth', role: 'Executive', codename: 'The Gamer', image: '/media/team_26/parth.jpg' },
+  { name: 'Kanishka Rai', role: 'President', codename: 'The Commander', image: '/media/team_26/kanishka.jpg' },
+  { name: 'Anjali', role: 'Treasurer', codename: 'The Artist', image: '/media/team_26/anjali.jpg' },
+  { name: 'Natya Vidhan Biswas', role: 'Secretary', codename: 'The Builder', image: '/media/team_26/natya.jpg' },
+  { name: 'Ayushi Jain', role: 'Senior Executive', codename: 'The Architect', image: '/media/team_26/ayushi.jpg' },
+  { name: 'Aksh Kumar', role: 'Senior Executive', codename: 'The Warrior', image: '/media/team_26/aksh.jpg' },
+  { name: 'Vrinda Goyal', role: 'Senior Executive', codename: 'The Oracle', image: '/media/team_26/vrinda.jpg' },
+  { name: 'Priyal Vatsa', role: 'Executive', codename: 'The Connector', image: '/media/team_26/priyal.jpg' },
 ]
 
 const teamDetails = [
-  { team: 'Design Team', members: ['Anjali', 'Kanishka Rai'] },
-  { team: 'Content Team', members: ['Aleesha Singh', 'Sundarm Yadav'] },
-  { team: 'Tech Team', members: ['Sourabh Pal', 'Kanishka Rai', 'Natya'] },
-  { team: 'Promotional Team', members: ['Priyanshi Jain'] },
-  { team: 'Decoration Team', members: ['Kanishka Rai'] },
-  { team: 'Sponsorship Team', members: ['Anjali', 'Isha Sharma'] },
+  { team: 'Content Team', members: ['Priyal Vatsa', 'Vrinda Goyal'] },
+  { team: 'Design Team', members: ['Ayushi Jain', 'Lavanya Sharma', 'Anjali', 'Kanishka Rai'] },
+  { team: 'Tech Team', members: ['Natya Vidhan Biswas', 'Parth'] },
+  { team: 'Sponsor & PR Team', members: ['Aksh Kumar', 'Riya', 'Soumya'] },
 ]
 
 const eventDetails = [
-  { event: 'Frame It Right', heads: ['Nancy Gupta', 'Priyanshi Jain'] },
-  { event: 'The Dalgona Quest', heads: ['Kanishka Rai', 'Anjali'] },
-  { event: 'The Final Argument', heads: ['Sundarm Yadav', 'Aleesha Singh'] },
-  { event: 'Code Of Duty', heads: ['Sourabh Pal', 'Kanishka Rai'] },
-  { event: 'BGMI Battle Royale', heads: ['Sundarm Yadav', 'Kanishka Rai'] },
-  { event: 'Geek League', heads: ['Priyanshi Jain', 'Anjali'] },
-  { event: 'Beyond The Abstract', heads: ['Nancy Gupta', 'Isha Sharma'] },
+  { event: 'Between Two Worlds', heads: ['Kanishka', 'Priyal'], time: '11:30 AM – 1:30 PM', venue: 'Seminar Hall' },
+  { event: 'Stranger Screens', heads: ['Anjali', 'Lavanya'], time: '11:30 AM – 1:30 PM', venue: '319 & 321' },
+  { event: "Eleven's Logic Lab", heads: ['Vrinda', 'Natya'], time: '11:30 AM – 1:30 PM', venue: 'LT - 3' },
+  { event: 'Hawkings Hack', heads: ['Ayushi', 'Natya'], time: '1:30 – 3:30 PM', venue: 'Seminar Hall' },
+  { event: 'Upside Showdown', heads: ['Parth', 'Aksh'], time: '1:30 – 3:30 PM', venue: '301 & 302' },
+  { event: 'Escape The Upside Down', heads: ['Anjali', 'Kanishka', 'Priyal'], time: '3:30 – 5:30 PM', venue: 'Canteen Lawn' },
 ]
 
 function Team() {
@@ -167,6 +162,11 @@ function Team() {
               <div className={styles.missionContent}>
                 <span className={styles.missionTag}>EVENT {String(index + 1).padStart(2, '0')}</span>
                 <h3 className={styles.missionName}>{item.event}</h3>
+                <div className={styles.missionMeta}>
+                  <span className={styles.missionMetaItem}>{item.time}</span>
+                  <span className={styles.missionMetaSep}>·</span>
+                  <span className={styles.missionMetaItem}>{item.venue}</span>
+                </div>
                 <div className={styles.missionDivider} />
                 <div className={styles.missionHeads}>
                   {item.heads.map((head, idx) => (

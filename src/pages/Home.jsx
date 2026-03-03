@@ -30,8 +30,8 @@ function Home() {
         <div className={styles.heroContent}>
           <div className={styles.titleWrapper}>
             <span className={styles.preTitle}>Enter the</span>
-            <h1 className={styles.mainTitle}>BLITZKRIEG</h1>
-            <div className={styles.yearBadge}>
+            <div className={styles.titleRow}>
+              <h1 className={styles.mainTitle}>BLITZKRIEG</h1>
               <span className={styles.yearText}>'26</span>
             </div>
           </div>
@@ -43,7 +43,7 @@ function Home() {
           <div className={styles.eventInfo}>
             <div className={styles.infoItem}>
               <span className={styles.infoLabel}>DATE</span>
-              <span className={styles.infoValue}>26TH FEB 2026</span>
+              <span className={styles.infoValue}>12TH MARCH 2026</span>
             </div>
             <div className={styles.infoDivider} />
             <div className={styles.infoItem}>
@@ -59,13 +59,6 @@ function Home() {
 
           <div className={styles.heroButtons}>
             <Link to="/events" className="register-button">Explore Events</Link>
-          </div>
-        </div>
-
-        <div className={styles.scrollIndicator}>
-          <span>Scroll to Enter</span>
-          <div className={styles.scrollArrow}>
-            <FontAwesomeIcon icon={faChevronDown} />
           </div>
         </div>
       </section>
@@ -144,14 +137,12 @@ function Home() {
             </div>
           </div>
 
-          <div className={styles.missionVisual}>
+          {/* <div className={styles.missionVisual}>
             <div className={styles.portalFrame}>
               <div className={styles.portalGlow} />
-              <div className={styles.portalInner}>
-                <span className={styles.portalText}>THE<br/>UPSIDE<br/>DOWN</span>
-              </div>
+              <img src="/media/door.png" alt="The Gate" className={styles.portalDoorImage} />
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -160,7 +151,7 @@ function Home() {
         <div className={styles.ctaContent}>
           <h2 className={styles.ctaTitle}>Ready to Enter?</h2>
           <p className={styles.ctaText}>
-            The gate closes on April 2nd, 2025. Don't miss your chance to be part of the final battle.
+            The gate closes on March 12th, 2026. Don't miss your chance to be part of the final battle.
           </p>
           <Link to="/events" className="register-button">View All Events</Link>
         </div>
