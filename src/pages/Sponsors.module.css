@@ -82,11 +82,36 @@
   padding: 2rem 0 4rem;
 }
 
+.sectionLabel {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.sectionTag {
+  display: inline-block;
+  font-family: 'Special Elite', monospace;
+  font-size: 0.85rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #e50914;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid rgba(229, 9, 20, 0.3);
+  background: rgba(229, 9, 20, 0.05);
+}
+
 .sponsorsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   max-width: 1200px;
+  margin: 0 auto;
+}
+
+.mediaGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 700px;
   margin: 0 auto;
 }
 
